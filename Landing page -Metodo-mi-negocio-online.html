@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Método Mi Negocio Online — Crea el sitio de tu negocio en 1 día</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          primary: '#0A1730',
+          accent: '#16C079',
+          bg: '#EEF2F9',
+          ink: '#51607B',
+        },
+        fontFamily: {
+          heading: ['Sora', 'system-ui', 'sans-serif'],
+          body: ['Inter', 'system-ui', 'sans-serif'],
+          mono: ['JetBrains Mono', 'ui-monospace', 'monospace'],
+        },
+        boxShadow: {
+          cta: '0 10px 30px -8px rgba(22,192,121,0.55)',
+        }
+      }
+    }
+  }
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', sans-serif; color: #51607B; background: #EEF2F9; }
+  h1,h2,h3,h4 { font-family: 'Sora', sans-serif; color: #0A1730; }
+  .eyebrow { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.08em; }
+  .btn-primary {
+    background: #16C079;
+    color: #fff;
+    border-radius: 9999px;
+    box-shadow: 0 10px 30px -8px rgba(22,192,121,0.55);
+    font-family: 'Sora', sans-serif;
+  }
+  .btn-primary:hover { filter: brightness(1.05); transform: translateY(-1px); }
+  .btn-ghost {
+    border-radius: 9999px;
+  }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  .faq-item { transition: box-shadow .3s ease; }
+  .faq-item:hover { box-shadow: 0 12px 30px -16px rgba(10,23,48,0.18); }
+  .faq-icon {
+    position: relative;
+    width: 34px; height: 34px;
+    border-radius: 9999px;
+    background: #E7ECF6;
+    flex-shrink: 0;
+    transition: background-color .3s ease, transform .5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .faq-bar {
+    position: absolute; top: 50%; left: 50%;
+    background: #0A1730;
+    border-radius: 2px;
+    transition: background-color .3s ease;
+  }
+  .faq-bar-h { width: 13px; height: 2px; transform: translate(-50%,-50%); }
+  .faq-bar-v { width: 2px; height: 13px; transform: translate(-50%,-50%); }
+  .faq-item:hover .faq-icon { background: #16C079; transform: rotate(45deg) scale(1.08); }
+  .faq-item:hover .faq-bar { background: #fff; }
+  .faq-item[open] .faq-icon { background: #16C079; transform: rotate(45deg); }
+  .faq-item[open] .faq-bar { background: #fff; }
+  .faq-item[open]:hover .faq-icon { transform: rotate(45deg) scale(1.08); }
+  .card-hover { transition: transform .25s ease, box-shadow .25s ease; }
+  .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px -20px rgba(10,23,48,0.25); }
+  .site-scroll {
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    transition: background-position 5.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+    background-color: #0A1730;
+  }
+  .site-scroll:hover { background-position: center bottom; }
+  .stage-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 28px;
+    transition: transform .35s ease, border-color .35s ease, background-color .35s ease, box-shadow .35s ease;
+  }
+  .stage-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(22,192,121,0.4);
+    background: rgba(255,255,255,0.05);
+    box-shadow: 0 20px 40px -20px rgba(22,192,121,0.35);
+  }
+  .stage-icon {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    background: rgba(22,192,121,0.1);
+    border: 1px solid rgba(22,192,121,0.2);
+    color: #16C079;
+    display: flex; align-items: center; justify-content: center;
+    transition: transform .4s cubic-bezier(0.34, 1.56, 0.64, 1), background-color .35s ease;
+  }
+  .stage-card:hover .stage-icon {
+    transform: scale(1.12) rotate(6deg);
+    background: rgba(22,192,121,0.22);
+  }
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 10px 30px -8px rgba(22,192,121,0.55); }
+    50% { box-shadow: 0 0 0 10px rgba(22,192,121,0.25), 0 10px 30px -8px rgba(22,192,121,0.55); }
+  }
+  #oferta-final:target .btn-primary { animation: pulseGlow 1s ease-in-out 3; }
+  .offer-shadow { box-shadow: 0 45px 90px -30px rgba(0,0,0,0.6); }
+  .check-dot {
+    width: 22px; height: 22px; border-radius: 9999px; flex-shrink: 0;
+    background: #16C079; color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    margin-top: 2px;
+  }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- ================= HERO ================= -->
+<section class="relative bg-primary overflow-hidden">
+  <div class="absolute inset-0 opacity-[0.35]" style="background-image:linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 42px 42px;"></div>
+  <div class="absolute -left-40 top-0 w-[520px] h-[520px] rounded-full bg-accent/10 blur-3xl"></div>
+  <div class="absolute right-0 top-1/3 w-[420px] h-[420px] rounded-full bg-accent/5 blur-3xl"></div>
+
+  <div class="relative max-w-7xl mx-auto px-6 pt-20 pb-16 md:pt-28 md:pb-20 grid md:grid-cols-2 gap-16 items-center">
+
+    <!-- left: copy -->
+    <div>
+      <h1 class="text-white text-[36px] leading-[1.12] md:text-[54px] md:leading-[1.1] font-extrabold">
+        Crea el sitio profesional de tu negocio en
+        <span class="text-accent border-b-4 border-accent inline-block pb-1">solo 1 día</span>
+        y ahorra cientos de dólares
+      </h1>
+      <p class="text-white/60 text-base md:text-lg max-w-md mt-6">
+        Mismo que nunca hayas creado un sitio. Del dominio a la publicación con Inteligencia Artificial — y sin necesidad de programar.
+      </p>
+
+      <div class="mt-8">
+        <a href="#oferta-final" class="btn-primary inline-flex items-center gap-2 px-8 py-4 font-semibold text-base">
+          Quiero crear mi sitio ahora →
+        </a>
+        <div class="flex flex-wrap gap-x-5 gap-y-1.5 text-white/50 eyebrow text-xs mt-4">
+          <span class="flex items-center gap-1.5"><span class="text-accent">✓</span> Acceso inmediato</span>
+          <span class="flex items-center gap-1.5"><span class="text-accent">✓</span> Paso a paso desde cero</span>
+          <span class="flex items-center gap-1.5"><span class="text-accent">✓</span> Sin necesidad de programar</span>
+        </div>
+      </div>
+
+      <!-- stats -->
+      <div class="mt-14 pt-7 border-t border-white/10 grid grid-cols-2 gap-x-6 gap-y-5 lg:flex lg:flex-nowrap lg:gap-x-9 lg:items-baseline">
+        <div class="flex items-baseline gap-1.5 whitespace-nowrap"><span class="text-white font-heading font-bold text-xl lg:text-2xl">1 día</span><span class="text-white/40 eyebrow text-[10px] uppercase">para publicar</span></div>
+        <div class="flex items-baseline gap-1.5 whitespace-nowrap"><span class="text-white font-heading font-bold text-xl lg:text-2xl">6</span><span class="text-white/40 eyebrow text-[10px] uppercase">módulos prácticos</span></div>
+        <div class="flex items-baseline gap-1.5 whitespace-nowrap"><span class="text-white font-heading font-bold text-xl lg:text-2xl">4</span><span class="text-white/40 eyebrow text-[10px] uppercase">bonos incluidos</span></div>
+        <div class="flex items-baseline gap-1.5 whitespace-nowrap"><span class="text-white font-heading font-bold text-xl lg:text-2xl">0</span><span class="text-white/40 eyebrow text-[10px] uppercase">líneas de código</span></div>
+      </div>
+    </div>
+
+    <!-- right: device slider -->
+    <div class="relative">
+      <span class="absolute -top-5 right-6 z-20 inline-flex items-center gap-2 bg-primary border border-white/15 rounded-full pl-3 pr-4 py-2 shadow-xl">
+        <span class="text-accent">⚡</span>
+        <span class="text-white text-xs font-heading font-semibold">Creado con IA</span>
+      </span>
+
+      <div id="heroSlider" class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[1200/825] bg-primary">
+        <img data-slide src="https://metodomeunegocioonline.com/assets/device-abogacia-moraes-almeida-DC_W66RM.webp" alt="Sitio de abogacía en notebook, tablet y celular" class="absolute inset-0 w-full h-full object-cover opacity-100 transition-opacity duration-[1200ms] ease-in-out">
+        <img data-slide src="https://metodomeunegocioonline.com/assets/device-pediatria-isabela-martins-CVSDi1oq.webp" alt="Sitio de pediatría en notebook, tablet y celular" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-[1200ms] ease-in-out">
+        <img data-slide src="https://metodomeunegocioonline.com/assets/device-odontologia-sonrisa-salud-DN-95mKV.webp" alt="Sitio de odontología en notebook, tablet y celular" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-[1200ms] ease-in-out">
+
+        <div class="absolute bottom-4 right-5 z-20 flex items-center gap-1.5">
+          <button data-dot class="w-6 h-2 rounded-full bg-accent transition-all duration-500"></button>
+          <button data-dot class="w-2 h-2 rounded-full bg-white/30 transition-all duration-500"></button>
+          <button data-dot class="w-2 h-2 rounded-full bg-white/30 transition-all duration-500"></button>
+        </div>
+      </div>
+
+      <div class="absolute -bottom-6 -left-6 z-20 bg-primary border border-white/15 rounded-xl px-5 py-4 shadow-2xl">
+        <p class="eyebrow text-[10px] text-accent uppercase">Tú ahorras</p>
+        <p class="text-white font-heading font-bold text-2xl mt-0.5">USD 400+</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    const slides = document.querySelectorAll('#heroSlider [data-slide]');
+    const dots = document.querySelectorAll('#heroSlider [data-dot]');
+    let i = 0;
+    function show(n){
+      slides.forEach((s,idx)=>{
+        s.classList.toggle('opacity-100', idx===n);
+        s.classList.toggle('opacity-0', idx!==n);
+      });
+      dots.forEach((d,idx)=>{
+        d.classList.toggle('w-6', idx===n);
+        d.classList.toggle('w-2', idx!==n);
+        d.classList.toggle('bg-accent', idx===n);
+        d.classList.toggle('bg-white/30', idx!==n);
+      });
+      i = n;
+    }
+    dots.forEach((d,idx)=> d.addEventListener('click', ()=> show(idx)));
+    setInterval(()=> show((i+1) % slides.length), 4000);
+  })();
+</script>
+
+<!-- ================= PROBLEMA ================= -->
+<section class="py-20 px-6">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl md:text-[38px] font-bold leading-tight">¿Tu negocio todavía depende solo de Instagram o WhatsApp?</h2>
+    <p class="mt-5 text-base md:text-lg">Muchos profesionales pierden credibilidad porque no tienen un sitio propio. Cuando un cliente busca tu nombre o tu empresa, espera encontrar una presencia profesional, clara y confiable.</p>
+  </div>
+  <div class="max-w-3xl mx-auto mt-10 grid sm:grid-cols-2 gap-4">
+    <div class="flex items-start gap-3 bg-white rounded-2xl p-5"><span class="text-accent mt-0.5">✕</span><span>Todavía no tienes un sitio propio</span></div>
+    <div class="flex items-start gap-3 bg-white rounded-2xl p-5"><span class="text-accent mt-0.5">✕</span><span>No sabes cómo registrar un dominio</span></div>
+    <div class="flex items-start gap-3 bg-white rounded-2xl p-5"><span class="text-accent mt-0.5">✕</span><span>Crees que crear un sitio es difícil o caro</span></div>
+    <div class="flex items-start gap-3 bg-white rounded-2xl p-5"><span class="text-accent mt-0.5">✕</span><span>No quieres depender de una agencia para todo</span></div>
+    <div class="flex items-start gap-3 bg-white rounded-2xl p-5 sm:col-span-2"><span class="text-accent mt-0.5">✕</span><span>Quieres parecer más profesional ante tus clientes</span></div>
+  </div>
+  <p class="text-center mt-8 font-heading font-semibold text-primary">Estar solo en redes sociales no es tener presencia propia.</p>
+</section>
+
+<!-- ================= VISIBILIDAD / GOOGLE ================= -->
+<section class="py-20 px-6 bg-primary">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl md:text-[38px] font-bold leading-tight text-white">Cuando alguien busca tu servicio, quien tiene sitio aparece primero</h2>
+    <p class="mt-5 text-base md:text-lg text-white/70">Antes de contratar, la mayoría de las personas busca en internet. Tener un sitio propio es lo que te coloca en ese momento de decisión — por delante de quien depende solo de las redes sociales.</p>
+  </div>
+
+  <div class="max-w-5xl mx-auto mt-12 grid md:grid-cols-3 gap-5">
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+      <h3 class="text-white font-heading font-semibold text-lg">Google indexa sitios, no perfiles</h3>
+      <p class="text-white/60 text-sm mt-2">Tu sitio tiene una dirección propia que Google lee y muestra. Un perfil de red social no siempre aparece en la búsqueda.</p>
+    </div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+      <h3 class="text-white font-heading font-semibold text-lg">Los primeros resultados se llevan los clics</h3>
+      <p class="text-white/60 text-sm mt-2">Quien aparece arriba es quien recibe la mayor parte de los contactos. Sin sitio, quedas fuera de esa disputa.</p>
+    </div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+      <h3 class="text-white font-heading font-semibold text-lg">Apareces por el nombre de tu negocio</h3>
+      <p class="text-white/60 text-sm mt-2">Con dominio propio, quien busca tu nombre te encuentra — con autoridad, y no a un competidor.</p>
+    </div>
+  </div>
+
+  <!-- mock search comparison -->
+  <div class="max-w-3xl mx-auto mt-14 bg-white rounded-2xl p-6 md:p-8">
+    <p class="eyebrow text-xs text-ink/60 mb-4">abogada derecho de familia en Curitiba</p>
+    <div class="border border-accent/30 bg-accent/5 rounded-xl p-4 relative">
+      <span class="absolute -top-3 left-4 bg-accent text-white text-[10px] font-heading font-semibold rounded-full px-3 py-1">Apareces aquí</span>
+      <p class="text-[13px] text-ink/50 mt-2">helenaprado.adv.br</p>
+      <p class="text-primary font-heading font-semibold">Dra. Helena Prado — Abogacía de Familia en Curitiba</p>
+      <p class="text-sm text-ink mt-1">Asesoría jurídica con claridad y cercanía. Agenda tu consulta y habla directo por WhatsApp.</p>
+      <p class="text-xs text-ink/50 mt-2">4,9 · Abogada · Abierto ahora</p>
+    </div>
+    <div class="border border-dashed border-ink/20 rounded-xl p-4 mt-4">
+      <p class="text-xs text-ink/40 mb-2">Sin un sitio, te quedas por aquí</p>
+      <p class="text-sm text-ink/40">Perfil de red social</p>
+      <p class="text-sm text-ink/40">Resultado genérico sin contacto</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROCESO 6 ETAPAS ================= -->
+<section class="py-24 px-6 bg-primary">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl md:text-[38px] font-bold leading-tight text-white">De cero al sitio publicado, sin saltarte ninguna etapa</h2>
+    <p class="mt-5 text-base md:text-lg text-white/60">Con el Método Mi Negocio Online sigues un camino completo — cada etapa desbloquea la siguiente hasta que tu sitio esté en línea.</p>
+  </div>
+
+  <div class="max-w-6xl mx-auto mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+    <div class="stage-card group">
+      <div class="flex items-start justify-between">
+        <div class="stage-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
+        <span class="eyebrow text-[11px] text-white/30 uppercase mt-1">etapa 01</span>
+      </div>
+      <h3 class="font-heading font-semibold text-white text-lg mt-6">Elección y registro del dominio</h3>
+      <p class="text-white/50 text-sm mt-2">Tu dirección propia en internet, a tu nombre.</p>
+    </div>
+
+    <div class="stage-card group">
+      <div class="flex items-start justify-between">
+        <div class="stage-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        </div>
+        <span class="eyebrow text-[11px] text-white/30 uppercase mt-1">etapa 02</span>
+      </div>
+      <h3 class="font-heading font-semibold text-white text-lg mt-6">Estructura de la marca online</h3>
+      <p class="text-white/50 text-sm mt-2">La base de tu sitio organizada y coherente.</p>
+    </div>
+
+    <div class="stage-card group">
+      <div class="flex items-start justify-between">
+        <div class="stage-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></svg>
+        </div>
+        <span class="eyebrow text-[11px] text-white/30 uppercase mt-1">etapa 03</span>
+      </div>
+      <h3 class="font-heading font-semibold text-white text-lg mt-6">Creación del sitio con IA</h3>
+      <p class="text-white/50 text-sm mt-2">La Inteligencia Artificial acelera todo el trabajo pesado.</p>
+    </div>
+
+    <div class="stage-card group">
+      <div class="flex items-start justify-between">
+        <div class="stage-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><circle cx="13.5" cy="6.5" r=".6" fill="currentColor" stroke="none"/><circle cx="17.5" cy="10.5" r=".6" fill="currentColor" stroke="none"/><circle cx="8.5" cy="7.5" r=".6" fill="currentColor" stroke="none"/><circle cx="6.5" cy="12.5" r=".6" fill="currentColor" stroke="none"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg>
+        </div>
+        <span class="eyebrow text-[11px] text-white/30 uppercase mt-1">etapa 04</span>
+      </div>
+      <h3 class="font-heading font-semibold text-white text-lg mt-6">Personalización visual</h3>
+      <p class="text-white/50 text-sm mt-2">Colores, textos e imágenes con tu identidad.</p>
+    </div>
+
+    <div class="stage-card group">
+      <div class="flex items-start justify-between">
+        <div class="stage-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg>
+        </div>
+        <span class="eyebrow text-[11px] text-white/30 uppercase mt-1">etapa 05</span>
+      </div>
+      <h3 class="font-heading font-semibold text-white text-lg mt-6">Publicación en internet</h3>
+      <p class="text-white/50 text-sm mt-2">Tu sitio en línea, accesible para cualquier cliente.</p>
+    </div>
+
+    <div class="stage-card group">
+      <div class="flex items-start justify-between">
+        <div class="stage-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+        </div>
+        <span class="eyebrow text-[11px] text-white/30 uppercase mt-1">etapa 06</span>
+      </div>
+      <h3 class="font-heading font-semibold text-white text-lg mt-6">Ajustes finales profesionales</h3>
+      <p class="text-white/50 text-sm mt-2">Los detalles que transmiten credibilidad de verdad.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= COMPARATIVA ================= -->
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-2xl md:text-[38px] font-bold leading-tight">¿Agencia o Método Mi Negocio Online?</h2>
+    <p class="mt-5 text-base md:text-lg">El mismo resultado — un sitio profesional en línea — por dos caminos muy diferentes.</p>
+  </div>
+  <div class="max-w-4xl mx-auto mt-12 grid md:grid-cols-2 gap-6">
+    <div class="border border-ink/15 rounded-2xl p-7">
+      <p class="eyebrow text-xs text-ink/50">CAMINO TRADICIONAL</p>
+      <h3 class="font-heading font-bold text-xl mt-2">Contratar una agencia</h3>
+      <ul class="mt-5 space-y-3 text-sm">
+        <li class="flex gap-2"><span>✕</span>Puede costar cientos o miles de dólares</li>
+        <li class="flex gap-2"><span>✕</span>Puede tardar días o semanas</li>
+        <li class="flex gap-2"><span>✕</span>Dependes de terceros para cada cambio</li>
+        <li class="flex gap-2"><span>✕</span>No siempre entiendes cómo funciona tu propio sitio</li>
+      </ul>
+      <div class="mt-6 pt-6 border-t border-ink/10">
+        <p class="text-xs text-ink/50">Inversión promedio</p>
+        <p class="font-heading font-bold text-lg text-primary">USD 400 – USD 1.000</p>
+      </div>
+    </div>
+    <div class="relative border-2 border-accent rounded-2xl p-7 bg-primary text-white">
+      <span class="absolute -top-3 left-7 bg-accent text-white text-[10px] font-heading font-semibold rounded-full px-3 py-1">Recomendado</span>
+      <p class="eyebrow text-xs text-accent">LA FORMA AUTÓNOMA</p>
+      <h3 class="font-heading font-bold text-xl mt-2 text-white">Método Mi Negocio Online</h3>
+      <ul class="mt-5 space-y-3 text-sm text-white/80">
+        <li class="flex gap-2"><span class="text-accent">✓</span>Sitio profesional publicado en hasta 1 día</li>
+        <li class="flex gap-2"><span class="text-accent">✓</span>Registra y usa tu propio dominio (tunegocio.com)</li>
+        <li class="flex gap-2"><span class="text-accent">✓</span>Paso a paso simple, incluso para principiantes</li>
+        <li class="flex gap-2"><span class="text-accent">✓</span>Usa IA para acelerar todo el proceso</li>
+        <li class="flex gap-2"><span class="text-accent">✓</span>Tú mismo editas cuando quieras, sin depender de nadie</li>
+        <li class="flex gap-2"><span class="text-accent">✓</span>Tu sitio se ve perfecto en computadora y celular</li>
+        <li class="flex gap-2"><span class="text-accent">✓</span>Acceso de por vida + actualizaciones</li>
+        <li class="flex gap-2"><span class="text-accent">✓</span>Soporte por correo si te trabas</li>
+      </ul>
+      <div class="mt-6 pt-6 border-t border-white/15">
+        <p class="text-xs text-white/50 line-through">Una agencia cobra de USD 400 a USD 1.000</p>
+        <p class="font-heading font-bold text-3xl text-white mt-1">USD 12,90</p>
+        <p class="text-xs text-white/50">pago único — sin mensualidad</p>
+        <a href="https://metodomeunegocioonline.com/es/#oferta" class="btn-primary mt-5 inline-flex items-center gap-2 px-7 py-3.5 font-semibold text-sm">Quiero ahorrar ahora →</a>
+        <p class="text-white/40 text-[11px] mt-3">Acceso inmediato · Pago seguro · Garantía de 7 días</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PÚBLICO OBJETIVO ================= -->
+<section class="py-20 px-6">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-2xl md:text-[38px] font-bold leading-tight">Hecho para profesionales que necesitan presencia digital</h2>
+    <p class="mt-5 text-base md:text-lg">Si tus clientes te buscan en internet, el método se adapta a tu tipo de negocio.</p>
+  </div>
+  <div class="max-w-3xl mx-auto mt-8 flex flex-wrap justify-center gap-3">
+    <span class="bg-white rounded-full px-5 py-2 text-sm font-medium text-primary">Abogados</span>
+    <span class="bg-white rounded-full px-5 py-2 text-sm font-medium text-primary">Contadores</span>
+    <span class="bg-white rounded-full px-5 py-2 text-sm font-medium text-primary">Dentistas</span>
+    <span class="bg-white rounded-full px-5 py-2 text-sm font-medium text-primary">Médicos</span>
+    <span class="bg-white rounded-full px-5 py-2 text-sm font-medium text-primary">Psicólogos</span>
+    <span class="bg-white rounded-full px-5 py-2 text-sm font-medium text-primary">Arquitectos</span>
+    <span class="bg-white rounded-full px-5 py-2 text-sm font-medium text-primary">Ingenieros</span>
+    <span class="bg-white rounded-full px-5 py-2 text-sm font-medium text-primary">Agentes inmobiliarios</span>
+    <span class="bg-white rounded-full px-5 py-2 text-sm font-medium text-primary">Consultores</span>
+    <span class="bg-white rounded-full px-5 py-2 text-sm font-medium text-primary">Clínicas</span>
+    <span class="bg-white rounded-full px-5 py-2 text-sm font-medium text-primary">Pequeños negocios</span>
+    <span class="bg-accent/10 border border-accent/30 rounded-full px-5 py-2 text-sm font-semibold text-accent">Y tu negocio también →</span>
+  </div>
+</section>
+
+<!-- ================= GALERÍA ================= -->
+<section class="py-24 px-6 bg-primary">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-2xl md:text-[38px] font-bold leading-tight text-white">Mira el tipo de sitio que vas a poder crear</h2>
+    <p class="mt-5 text-base md:text-lg text-white/60">Todos estos ejemplos se pueden hacer con el paso a paso del método — con dominio propio, aspecto profesional y listos para recibir clientes. Desde cero, sin programar.</p>
+  </div>
+  <div class="max-w-6xl mx-auto mt-14 grid md:grid-cols-2 gap-8">
+    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/arquitectura-almeida-vargas-ofo87J6H.webp')" role="img" aria-label="Sitio de Arquitectura — Almeida & Vargas"></div>
+    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/abogacia-vasconcelos-rodrigues-mb6fxODE.webp')" role="img" aria-label="Sitio de Abogacía — Vasconcelos Rodrigues"></div>
+    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/odontologia-sonrisa-alineado-CfyZ_qQk.webp')" role="img" aria-label="Sitio de Odontología — Sonrisa & Alineado"></div>
+    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/cardiologia-rafael-mendes-BLn7vxio.webp')" role="img" aria-label="Sitio de Cardiología — Dr. Rafael Mendes"></div>
+    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/pediatria-laura-carvalho-CcB5heHN.webp')" role="img" aria-label="Sitio de Pediatría — Dra. Laura Carvalho"></div>
+    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/contabilidad-contabilize-BEgIJdqE.webp')" role="img" aria-label="Sitio de Contabilidad — Contabilize"></div>
+  </div>
+  <div class="text-center mt-12">
+    <a href="https://metodomeunegocioonline.com/es/#oferta" class="btn-primary inline-flex items-center gap-2 px-8 py-4 font-semibold text-base">Quiero crear mi sitio ahora →</a>
+    <p class="text-sm text-white/50 mt-4">Cada uno de estos pasó de cero al aire en 1 día</p>
+  </div>
+</section>
+
+<!-- ================= BENEFICIOS ================= -->
+<section class="py-20 px-6">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-2xl md:text-[38px] font-bold leading-tight">¿Por qué tener un sitio profesional?</h2>
+    <p class="mt-5 text-base md:text-lg">No se trata de estar en internet. Se trata de que te tomen en serio quienes van a contratarte.</p>
+  </div>
+  <div class="max-w-5xl mx-auto mt-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+    <div class="bg-white rounded-2xl p-6"><h3 class="font-heading font-semibold text-primary">Transmite más credibilidad</h3><p class="text-sm mt-2">Un sitio propio muestra que tu trabajo es serio y consolidado.</p></div>
+    <div class="bg-white rounded-2xl p-6"><h3 class="font-heading font-semibold text-primary">Fortalece tu marca</h3><p class="text-sm mt-2">Tu identidad profesional en una dirección solo tuya.</p></div>
+    <div class="bg-white rounded-2xl p-6"><h3 class="font-heading font-semibold text-primary">Ayuda a que los clientes te encuentren</h3><p class="text-sm mt-2">Quien busca tu nombre en Google encuentra una presencia real.</p></div>
+    <div class="bg-white rounded-2xl p-6"><h3 class="font-heading font-semibold text-primary">Presenta tus servicios</h3><p class="text-sm mt-2">Todo lo que haces, organizado de forma clara y profesional.</p></div>
+    <div class="bg-white rounded-2xl p-6"><h3 class="font-heading font-semibold text-primary">Genera contactos por WhatsApp</h3><p class="text-sm mt-2">Convierte visitantes en conversaciones con un clic.</p></div>
+    <div class="bg-white rounded-2xl p-6"><h3 class="font-heading font-semibold text-primary">Muestra que tu negocio es serio</h3><p class="text-sm mt-2">La confianza empieza por la primera impresión online.</p></div>
+    <div class="bg-white rounded-2xl p-6 sm:col-span-2 lg:col-span-1"><h3 class="font-heading font-semibold text-primary">Reduce la dependencia de las redes</h3><p class="text-sm mt-2">Dejas de depender solo de algoritmos que no controlas.</p></div>
+  </div>
+</section>
+
+<!-- ================= MÓDULOS ================= -->
+<section class="py-20 px-6 bg-primary">
+  <div class="max-w-3xl mx-auto text-center">
+    <p class="eyebrow text-xs text-accent">LO QUE VAS A APRENDER</p>
+    <h2 class="text-2xl md:text-[38px] font-bold leading-tight text-white mt-3">Seis módulos prácticos, en el orden exacto</h2>
+    <p class="mt-5 text-base md:text-lg text-white/70">Desde cero hasta tu sitio publicado.</p>
+  </div>
+  <div class="max-w-5xl mx-auto mt-12 grid sm:grid-cols-2 gap-5">
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><span class="font-heading font-bold text-accent text-sm">01</span><h3 class="font-heading font-semibold text-white mt-2">Preparando tu presencia digital</h3><p class="text-white/60 text-sm mt-2">Los fundamentos para empezar con el pie derecho y sin trabarte.</p></div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><span class="font-heading font-bold text-accent text-sm">02</span><h3 class="font-heading font-semibold text-white mt-2">Eligiendo y registrando tu dominio</h3><p class="text-white/60 text-sm mt-2">Cómo asegurar la dirección propia de tu negocio en internet.</p></div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><span class="font-heading font-bold text-accent text-sm">03</span><h3 class="font-heading font-semibold text-white mt-2">Creando la estructura del sitio con IA</h3><p class="text-white/60 text-sm mt-2">Usa la Inteligencia Artificial para armar la base de tu sitio rápido.</p></div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><span class="font-heading font-bold text-accent text-sm">04</span><h3 class="font-heading font-semibold text-white mt-2">Personalizando textos, imágenes y servicios</h3><p class="text-white/60 text-sm mt-2">Deja el sitio con tu cara, tu identidad y tus servicios.</p></div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><span class="font-heading font-bold text-accent text-sm">05</span><h3 class="font-heading font-semibold text-white mt-2">Publicando tu sitio en internet</h3><p class="text-white/60 text-sm mt-2">El paso a paso para poner todo al aire, accesible para cualquier cliente.</p></div>
+    <div class="bg-white/5 border border-white/10 rounded-2xl p-6"><span class="font-heading font-bold text-accent text-sm">06</span><h3 class="font-heading font-semibold text-white mt-2">Ajustes finales para dejar todo profesional</h3><p class="text-white/60 text-sm mt-2">Los detalles que separan un sitio amateur de un sitio que genera confianza.</p></div>
+  </div>
+</section>
+
+<!-- ================= BONOS ================= -->
+<section class="py-20 px-6 bg-white">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-2xl md:text-[38px] font-bold leading-tight">Bonos incluidos en tu acceso</h2>
+    <p class="mt-5 text-base md:text-lg">Además de los 6 módulos, te llevas cuatro materiales prácticos para acelerar aún más el resultado.</p>
+  </div>
+  <div class="max-w-5xl mx-auto mt-12 grid sm:grid-cols-2 gap-5">
+    <div class="bg-bg rounded-2xl p-6"><p class="eyebrow text-xs text-accent">BONO 01</p><h3 class="font-heading font-semibold text-primary mt-2">Prompts listos para crear sitios con IA</h3><p class="text-sm mt-2">Copia, pega y adapta. Los comandos correctos para que la IA construya tu sitio sin que te trabes.</p></div>
+    <div class="bg-bg rounded-2xl p-6"><p class="eyebrow text-xs text-accent">BONO 02</p><h3 class="font-heading font-semibold text-primary mt-2">Plantillas de estructura para profesionales independientes</h3><p class="text-sm mt-2">Estructuras probadas de sitio, listas para tu tipo de negocio.</p></div>
+    <div class="bg-bg rounded-2xl p-6"><p class="eyebrow text-xs text-accent">BONO 03</p><h3 class="font-heading font-semibold text-primary mt-2">Checklist de publicación del sitio</h3><p class="text-sm mt-2">La lista completa para no olvidar nada antes de poner tu sitio en línea.</p></div>
+    <div class="bg-bg rounded-2xl p-6"><p class="eyebrow text-xs text-accent">BONO 04</p><h3 class="font-heading font-semibold text-primary mt-2">Guía rápida para un sitio más confiable</h3><p class="text-sm mt-2">Los ajustes finales que hacen que tu cliente confíe en tu trabajo desde el primer momento.</p></div>
+  </div>
+</section>
+
+<!-- ================= OFERTA FINAL ================= -->
+<section id="oferta-final" class="py-20 px-6 bg-primary scroll-mt-10">
+  <div class="relative max-w-5xl mx-auto rounded-[28px] overflow-hidden border border-white/10 offer-shadow" style="background: linear-gradient(135deg, #10233f 0%, #0A1730 55%, #071022 100%);">
+    <div class="absolute inset-0 opacity-[0.3] pointer-events-none" style="background-image:linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 36px 36px;"></div>
+    <div class="absolute -left-24 -top-24 w-72 h-72 rounded-full bg-accent/10 blur-3xl pointer-events-none"></div>
+
+    <div class="relative grid md:grid-cols-2 gap-10 p-8 md:p-14 items-center">
+      <!-- left: copy -->
+      <div>
+        <h2 class="text-[28px] md:text-[36px] font-bold leading-tight text-white">Empieza hoy a construir tu presencia profesional en internet</h2>
+        <ul class="mt-7 space-y-4 text-sm">
+          <li class="flex items-start gap-3"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-white/85">6 módulos prácticos desde cero hasta la publicación</span></li>
+          <li class="flex items-start gap-3"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-white/85">4 bonos para acelerar tu resultado</span></li>
+          <li class="flex items-start gap-3"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-white/85">Prompts de IA listos para usar</span></li>
+          <li class="flex items-start gap-3"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-white/85">Acceso inmediato y 100% online</span></li>
+          <li class="flex items-start gap-3"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-white/85">Aprende a usar tu dominio propio</span></li>
+          <li class="flex items-start gap-3"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-white/85">Sin mensualidad — pago único</span></li>
+        </ul>
+      </div>
+
+      <!-- right: price card -->
+      <div class="bg-[#0A1730] border border-white/10 rounded-2xl p-8">
+        <span class="inline-flex items-center gap-2 eyebrow text-[11px] text-white/50 uppercase">
+          <span class="text-violet-400">⚡</span> Acceso completo al método
+        </span>
+        <p class="text-white/50 text-sm mt-5">De <span class="line-through">USD 197</span> por solo</p>
+        <p class="font-heading font-extrabold text-white text-[44px] leading-none mt-1">USD 12,90</p>
+        <p class="text-accent eyebrow text-xs mt-2">al contado</p>
+
+        <a href="https://pay.hotmart.com/C106767554G?checkoutMode=10&utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=" class="btn-primary w-full mt-7 inline-flex justify-center items-center gap-2 px-7 py-4 font-semibold text-base text-center leading-snug">Quiero acceder al Método ahora →</a>
+
+        <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-1 eyebrow text-[10px] text-white/40 uppercase mt-5">
+          <span class="flex items-center gap-1.5"><span class="text-accent">🔒</span>Pago seguro</span>
+          <span>Acceso inmediato</span>
+          <span>Contenido 100% online</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- garantia -->
+  <div class="max-w-2xl mx-auto mt-10 flex items-start gap-4 bg-white/5 border border-white/10 rounded-2xl p-6">
+    <span class="font-heading font-bold text-accent text-2xl shrink-0">7 días</span>
+    <div>
+      <h3 class="font-heading font-semibold text-white">Garantía de 7 días</h3>
+      <p class="text-white/60 text-sm mt-1">Puedes acceder al contenido, seguir los primeros pasos y, si entiendes que el método no es para ti, puedes solicitar reembolso dentro del plazo de garantía. El riesgo es todo nuestro.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="py-24 px-6">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-[32px] md:text-[44px] font-extrabold leading-tight text-primary">Preguntas frecuentes</h2>
+    <p class="mt-4 text-base md:text-lg">¿Te quedó alguna duda? Probablemente esté respondida aquí.</p>
+  </div>
+  <div class="max-w-2xl mx-auto mt-12 space-y-4">
+    <details class="faq-item bg-white rounded-2xl px-6 md:px-7 py-5 md:py-6">
+      <summary class="faq-summary flex justify-between items-center gap-6 font-heading font-bold text-primary text-base md:text-lg">
+        <span>¿Necesito saber programar?</span>
+        <span class="faq-icon"><span class="faq-bar faq-bar-h"></span><span class="faq-bar faq-bar-v"></span></span>
+      </summary>
+      <p class="text-sm text-ink mt-4 pr-10">No. El método fue hecho para principiantes. No escribes ni una sola línea de código: la Inteligencia Artificial hace el trabajo pesado y tú sigues el paso a paso.</p>
+    </details>
+    <details class="faq-item bg-white rounded-2xl px-6 md:px-7 py-5 md:py-6">
+      <summary class="faq-summary flex justify-between items-center gap-6 font-heading font-bold text-primary text-base md:text-lg">
+        <span>¿Necesito contratar una agencia?</span>
+        <span class="faq-icon"><span class="faq-bar faq-bar-h"></span><span class="faq-bar faq-bar-v"></span></span>
+      </summary>
+      <p class="text-sm text-ink mt-4 pr-10">No. La propuesta es justamente enseñarte a crear y publicar tu propio sitio, sin depender de terceros para cada cambio.</p>
+    </details>
+    <details class="faq-item bg-white rounded-2xl px-6 md:px-7 py-5 md:py-6">
+      <summary class="faq-summary flex justify-between items-center gap-6 font-heading font-bold text-primary text-base md:text-lg">
+        <span>¿El sitio queda en mi dominio?</span>
+        <span class="faq-icon"><span class="faq-bar faq-bar-h"></span><span class="faq-bar faq-bar-v"></span></span>
+      </summary>
+      <p class="text-sm text-ink mt-4 pr-10">Sí. Aprendes a registrar y usar un dominio propio, con el nombre de tu negocio, transmitiendo más profesionalismo.</p>
+    </details>
+    <details class="faq-item bg-white rounded-2xl px-6 md:px-7 py-5 md:py-6">
+      <summary class="faq-summary flex justify-between items-center gap-6 font-heading font-bold text-primary text-base md:text-lg">
+        <span>¿Sirve para cualquier profesión?</span>
+        <span class="faq-icon"><span class="faq-bar faq-bar-h"></span><span class="faq-bar faq-bar-v"></span></span>
+      </summary>
+      <p class="text-sm text-ink mt-4 pr-10">Sí. El método se puede adaptar para abogados, contadores, dentistas, médicos, consultores, clínicas y muchos otros negocios.</p>
+    </details>
+    <details class="faq-item bg-white rounded-2xl px-6 md:px-7 py-5 md:py-6">
+      <summary class="faq-summary flex justify-between items-center gap-6 font-heading font-bold text-primary text-base md:text-lg">
+        <span>¿En cuánto tiempo logro publicar?</span>
+        <span class="faq-icon"><span class="faq-bar faq-bar-h"></span><span class="faq-bar faq-bar-v"></span></span>
+      </summary>
+      <p class="text-sm text-ink mt-4 pr-10">La propuesta es que logres publicar en hasta 1 día siguiendo el paso a paso, incluso empezando desde cero.</p>
+    </details>
+    <details class="faq-item bg-white rounded-2xl px-6 md:px-7 py-5 md:py-6">
+      <summary class="faq-summary flex justify-between items-center gap-6 font-heading font-bold text-primary text-base md:text-lg">
+        <span>¿El acceso es inmediato?</span>
+        <span class="faq-icon"><span class="faq-bar faq-bar-h"></span><span class="faq-bar faq-bar-v"></span></span>
+      </summary>
+      <p class="text-sm text-ink mt-4 pr-10">Sí. Tras la confirmación de la compra, el acceso al contenido se libera al instante, 100% en línea.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ================= CTA FINAL ================= -->
+<section class="py-20 px-6 bg-white text-center">
+  <span class="eyebrow inline-flex items-center gap-2 text-xs text-accent border border-accent/30 bg-accent/5 rounded-full px-4 py-1.5">
+    <span class="w-1.5 h-1.5 rounded-full bg-accent"></span> www.tunegocio.com — en vivo
+  </span>
+  <h2 class="text-2xl md:text-[38px] font-bold leading-tight max-w-2xl mx-auto mt-6">Tu negocio merece un sitio profesional</h2>
+  <p class="mt-5 text-base md:text-lg max-w-xl mx-auto">Deja de posponer tu presencia digital. Aprende a crear tu sitio, publicarlo en internet y transmitir más credibilidad a tus clientes.</p>
+  <a href="https://metodomeunegocioonline.com/es/#oferta" class="btn-primary inline-flex items-center gap-2 px-8 py-4 font-semibold text-base mt-8">Crear mi sitio por USD 12,90 →</a>
+  <p class="text-xs text-ink/50 mt-4">De USD 197 por USD 12,90 · Garantía de 7 días · Acceso inmediato</p>
+</section>
+
+</body>
+</html>

@@ -1,0 +1,438 @@
+- generic [active] [ref=f8e1]:
+  - banner [ref=f8e2]:
+    - generic [ref=f8e3]:
+      - link "Digloff, inicio" [ref=f8e4] [cursor=pointer]:
+        - /url: "#top"
+        - generic [ref=f8e6]: Digloff
+      - navigation "Navegación principal" [ref=f8e7]:
+        - link "Servicios" [ref=f8e8] [cursor=pointer]:
+          - /url: "#servicios"
+        - link "Automatizaciones" [ref=f8e9] [cursor=pointer]:
+          - /url: "#automatizaciones"
+        - link "Beneficios" [ref=f8e10] [cursor=pointer]:
+          - /url: "#beneficios"
+        - link "Proceso" [ref=f8e11] [cursor=pointer]:
+          - /url: "#proceso"
+        - link "Reservas" [ref=f8e12] [cursor=pointer]:
+          - /url: "#reservas"
+        - link "FAQ" [ref=f8e13] [cursor=pointer]:
+          - /url: "#faq"
+        - link "Contacto" [ref=f8e14] [cursor=pointer]:
+          - /url: https://wa.me/18093025082
+      - link "Hablar ahora" [ref=f8e15] [cursor=pointer]:
+        - /url: https://wa.me/18093025082
+  - generic [ref=f8e20]:
+    - generic [ref=f8e21]:
+      - heading "Crea el sitio profesional de tu negocio en solo 1 día y ahorra cientos de dólares" [level=1] [ref=f8e22]:
+        - text: Crea el sitio profesional de tu negocio en
+        - generic [ref=f8e23]: solo 1 día
+        - text: y ahorra cientos de dólares
+      - paragraph [ref=f8e24]: Mismo que nunca hayas creado un sitio. Del dominio a la publicación con Inteligencia Artificial — y sin necesidad de programar.
+      - generic [ref=f8e25]:
+        - link "Quiero crear mi sitio ahora →" [ref=f8e26] [cursor=pointer]:
+          - /url: "#oferta-final"
+        - generic [ref=f8e27]:
+          - generic [ref=f8e28]:
+            - generic [ref=f8e29]: ✓
+            - text: Acceso inmediato
+          - generic [ref=f8e30]:
+            - generic [ref=f8e31]: ✓
+            - text: Paso a paso desde cero
+          - generic [ref=f8e32]:
+            - generic [ref=f8e33]: ✓
+            - text: Sin necesidad de programar
+      - generic [ref=f8e34]:
+        - generic [ref=f8e35]:
+          - generic [ref=f8e36]: 1 día
+          - generic [ref=f8e37]: para publicar
+        - generic [ref=f8e38]:
+          - generic [ref=f8e39]: "6"
+          - generic [ref=f8e40]: módulos prácticos
+        - generic [ref=f8e41]:
+          - generic [ref=f8e42]: "4"
+          - generic [ref=f8e43]: bonos incluidos
+        - generic [ref=f8e44]:
+          - generic [ref=f8e45]: "0"
+          - generic [ref=f8e46]: líneas de código
+    - generic [ref=f8e47]:
+      - generic [ref=f8e48]:
+        - generic [ref=f8e49]: ⚡
+        - generic [ref=f8e50]: Creado con IA
+      - generic [ref=f8e51]:
+        - img "Sitio de abogacía en notebook, tablet y celular" [ref=f8e52]
+        - img "Sitio de pediatría en notebook, tablet y celular" [ref=f8e53]
+        - img "Sitio de odontología en notebook, tablet y celular" [ref=f8e54]
+        - generic [ref=f8e55]:
+          - button [ref=f8e56] [cursor=pointer]
+          - button [ref=f8e57] [cursor=pointer]
+          - button [ref=f8e58] [cursor=pointer]
+      - generic [ref=f8e59]:
+        - paragraph [ref=f8e60]: Tú ahorras
+        - paragraph [ref=f8e61]: USD 400+
+  - generic [ref=f8e62]:
+    - generic [ref=f8e63]:
+      - heading "¿Tu negocio todavía depende solo de Instagram o WhatsApp?" [level=2] [ref=f8e64]
+      - paragraph [ref=f8e65]: Muchos profesionales pierden credibilidad porque no tienen un sitio propio. Cuando un cliente busca tu nombre o tu empresa, espera encontrar una presencia profesional, clara y confiable.
+    - generic [ref=f8e66]:
+      - generic [ref=f8e67]:
+        - generic [ref=f8e68]: ✕
+        - generic [ref=f8e69]: Todavía no tienes un sitio propio
+      - generic [ref=f8e70]:
+        - generic [ref=f8e71]: ✕
+        - generic [ref=f8e72]: No sabes cómo registrar un dominio
+      - generic [ref=f8e73]:
+        - generic [ref=f8e74]: ✕
+        - generic [ref=f8e75]: Crees que crear un sitio es difícil o caro
+      - generic [ref=f8e76]:
+        - generic [ref=f8e77]: ✕
+        - generic [ref=f8e78]: No quieres depender de una agencia para todo
+      - generic [ref=f8e79]:
+        - generic [ref=f8e80]: ✕
+        - generic [ref=f8e81]: Quieres parecer más profesional ante tus clientes
+    - paragraph [ref=f8e82]: Estar solo en redes sociales no es tener presencia propia.
+  - generic [ref=f8e83]:
+    - generic [ref=f8e84]:
+      - heading "Cuando alguien busca tu servicio, quien tiene sitio aparece primero" [level=2] [ref=f8e85]
+      - paragraph [ref=f8e86]: Antes de contratar, la mayoría de las personas busca en internet. Tener un sitio propio es lo que te coloca en ese momento de decisión — por delante de quien depende solo de las redes sociales.
+    - generic [ref=f8e87]:
+      - generic [ref=f8e88]:
+        - heading "Google indexa sitios, no perfiles" [level=3] [ref=f8e89]
+        - paragraph [ref=f8e90]: Tu sitio tiene una dirección propia que Google lee y muestra. Un perfil de red social no siempre aparece en la búsqueda.
+      - generic [ref=f8e91]:
+        - heading "Los primeros resultados se llevan los clics" [level=3] [ref=f8e92]
+        - paragraph [ref=f8e93]: Quien aparece arriba es quien recibe la mayor parte de los contactos. Sin sitio, quedas fuera de esa disputa.
+      - generic [ref=f8e94]:
+        - heading "Apareces por el nombre de tu negocio" [level=3] [ref=f8e95]
+        - paragraph [ref=f8e96]: Con dominio propio, quien busca tu nombre te encuentra — con autoridad, y no a un competidor.
+    - generic [ref=f8e97]:
+      - paragraph [ref=f8e98]: abogada derecho de familia en Curitiba
+      - generic [ref=f8e99]:
+        - generic [ref=f8e100]: Apareces aquí
+        - paragraph [ref=f8e101]: helenaprado.adv.br
+        - paragraph [ref=f8e102]: Dra. Helena Prado — Abogacía de Familia en Curitiba
+        - paragraph [ref=f8e103]: Asesoría jurídica con claridad y cercanía. Agenda tu consulta y habla directo por WhatsApp.
+        - paragraph [ref=f8e104]: 4,9 · Abogada · Abierto ahora
+      - generic [ref=f8e105]:
+        - paragraph [ref=f8e106]: Sin un sitio, te quedas por aquí
+        - paragraph [ref=f8e107]: Perfil de red social
+        - paragraph [ref=f8e108]: Resultado genérico sin contacto
+  - generic [ref=f8e109]:
+    - generic [ref=f8e110]:
+      - heading "De cero al sitio publicado, sin saltarte ninguna etapa" [level=2] [ref=f8e111]
+      - paragraph [ref=f8e112]: Con el Método Mi Negocio Online sigues un camino completo — cada etapa desbloquea la siguiente hasta que tu sitio esté en línea.
+    - generic [ref=f8e113]:
+      - generic [ref=f8e114]:
+        - generic [ref=f8e115]: etapa 01
+        - heading "Elección y registro del dominio" [level=3] [ref=f8e121]
+        - paragraph [ref=f8e122]: Tu dirección propia en internet, a tu nombre.
+      - generic [ref=f8e123]:
+        - generic [ref=f8e124]: etapa 02
+        - heading "Estructura de la marca online" [level=3] [ref=f8e131]
+        - paragraph [ref=f8e132]: La base de tu sitio organizada y coherente.
+      - generic [ref=f8e133]:
+        - generic [ref=f8e134]: etapa 03
+        - heading "Creación del sitio con IA" [level=3] [ref=f8e139]
+        - paragraph [ref=f8e140]: La Inteligencia Artificial acelera todo el trabajo pesado.
+      - generic [ref=f8e141]:
+        - generic [ref=f8e142]: etapa 04
+        - heading "Personalización visual" [level=3] [ref=f8e151]
+        - paragraph [ref=f8e152]: Colores, textos e imágenes con tu identidad.
+      - generic [ref=f8e153]:
+        - generic [ref=f8e154]: etapa 05
+        - heading "Publicación en internet" [level=3] [ref=f8e162]
+        - paragraph [ref=f8e163]: Tu sitio en línea, accesible para cualquier cliente.
+      - generic [ref=f8e164]:
+        - generic [ref=f8e165]: etapa 06
+        - heading "Ajustes finales profesionales" [level=3] [ref=f8e171]
+        - paragraph [ref=f8e172]: Los detalles que transmiten credibilidad de verdad.
+  - generic [ref=f8e173]:
+    - generic [ref=f8e174]:
+      - heading "¿Agencia o Método Mi Negocio Online?" [level=2] [ref=f8e175]
+      - paragraph [ref=f8e176]: El mismo resultado — un sitio profesional en línea — por dos caminos muy diferentes.
+    - generic [ref=f8e177]:
+      - generic [ref=f8e178]:
+        - paragraph [ref=f8e179]: CAMINO TRADICIONAL
+        - heading "Contratar una agencia" [level=3] [ref=f8e180]
+        - list [ref=f8e181]:
+          - listitem [ref=f8e182]:
+            - generic [ref=f8e183]: ✕
+            - text: Puede costar cientos o miles de dólares
+          - listitem [ref=f8e184]:
+            - generic [ref=f8e185]: ✕
+            - text: Puede tardar días o semanas
+          - listitem [ref=f8e186]:
+            - generic [ref=f8e187]: ✕
+            - text: Dependes de terceros para cada cambio
+          - listitem [ref=f8e188]:
+            - generic [ref=f8e189]: ✕
+            - text: No siempre entiendes cómo funciona tu propio sitio
+        - generic [ref=f8e190]:
+          - paragraph [ref=f8e191]: Inversión promedio
+          - paragraph [ref=f8e192]: USD 400 – USD 1.000
+      - generic [ref=f8e193]:
+        - generic [ref=f8e194]: Recomendado
+        - paragraph [ref=f8e195]: LA FORMA AUTÓNOMA
+        - heading "Método Mi Negocio Online" [level=3] [ref=f8e196]
+        - list [ref=f8e197]:
+          - listitem [ref=f8e198]:
+            - generic [ref=f8e199]: ✓
+            - text: Sitio profesional publicado en hasta 1 día
+          - listitem [ref=f8e200]:
+            - generic [ref=f8e201]: ✓
+            - text: Registra y usa tu propio dominio (tunegocio.com)
+          - listitem [ref=f8e202]:
+            - generic [ref=f8e203]: ✓
+            - text: Paso a paso simple, incluso para principiantes
+          - listitem [ref=f8e204]:
+            - generic [ref=f8e205]: ✓
+            - text: Usa IA para acelerar todo el proceso
+          - listitem [ref=f8e206]:
+            - generic [ref=f8e207]: ✓
+            - text: Tú mismo editas cuando quieras, sin depender de nadie
+          - listitem [ref=f8e208]:
+            - generic [ref=f8e209]: ✓
+            - text: Tu sitio se ve perfecto en computadora y celular
+          - listitem [ref=f8e210]:
+            - generic [ref=f8e211]: ✓
+            - text: Acceso de por vida + actualizaciones
+          - listitem [ref=f8e212]:
+            - generic [ref=f8e213]: ✓
+            - text: Soporte por correo si te trabas
+        - generic [ref=f8e214]:
+          - paragraph [ref=f8e215]: Una agencia cobra de USD 400 a USD 1.000
+          - paragraph [ref=f8e216]: USD 12,90
+          - paragraph [ref=f8e217]: pago único — sin mensualidad
+          - link "Quiero ahorrar ahora →" [ref=f8e218] [cursor=pointer]:
+            - /url: https://metodomeunegocioonline.com/es/#oferta
+          - paragraph [ref=f8e219]: Acceso inmediato · Pago seguro · Garantía de 7 días
+  - generic [ref=f8e220]:
+    - generic [ref=f8e221]:
+      - heading "Hecho para profesionales que necesitan presencia digital" [level=2] [ref=f8e222]
+      - paragraph [ref=f8e223]: Si tus clientes te buscan en internet, el método se adapta a tu tipo de negocio.
+    - generic [ref=f8e224]:
+      - generic [ref=f8e225]: Abogados
+      - generic [ref=f8e226]: Contadores
+      - generic [ref=f8e227]: Dentistas
+      - generic [ref=f8e228]: Médicos
+      - generic [ref=f8e229]: Psicólogos
+      - generic [ref=f8e230]: Arquitectos
+      - generic [ref=f8e231]: Ingenieros
+      - generic [ref=f8e232]: Agentes inmobiliarios
+      - generic [ref=f8e233]: Consultores
+      - generic [ref=f8e234]: Clínicas
+      - generic [ref=f8e235]: Pequeños negocios
+      - generic [ref=f8e236]: Y tu negocio también →
+  - generic [ref=f8e237]:
+    - generic [ref=f8e238]:
+      - heading "Mira el tipo de sitio que vas a poder crear" [level=2] [ref=f8e239]
+      - paragraph [ref=f8e240]: Todos estos ejemplos se pueden hacer con el paso a paso del método — con dominio propio, aspecto profesional y listos para recibir clientes. Desde cero, sin programar.
+    - generic [ref=f8e241]:
+      - img "Sitio de Arquitectura — Almeida & Vargas" [ref=f8e242]
+      - img "Sitio de Abogacía — Vasconcelos Rodrigues" [ref=f8e243]
+      - img "Sitio de Odontología — Sonrisa & Alineado" [ref=f8e244]
+      - img "Sitio de Cardiología — Dr. Rafael Mendes" [ref=f8e245]
+      - img "Sitio de Pediatría — Dra. Laura Carvalho" [ref=f8e246]
+      - img "Sitio de Contabilidad — Contabilize" [ref=f8e247]
+    - generic [ref=f8e248]:
+      - link "Quiero crear mi sitio ahora →" [ref=f8e249] [cursor=pointer]:
+        - /url: https://metodomeunegocioonline.com/es/#oferta
+      - paragraph [ref=f8e250]: Cada uno de estos pasó de cero al aire en 1 día
+  - generic [ref=f8e251]:
+    - generic [ref=f8e252]:
+      - heading "¿Por qué tener un sitio profesional?" [level=2] [ref=f8e253]
+      - paragraph [ref=f8e254]: No se trata de estar en internet. Se trata de que te tomen en serio quienes van a contratarte.
+    - generic [ref=f8e255]:
+      - generic [ref=f8e256]:
+        - heading "Transmite más credibilidad" [level=3] [ref=f8e257]
+        - paragraph [ref=f8e258]: Un sitio propio muestra que tu trabajo es serio y consolidado.
+      - generic [ref=f8e259]:
+        - heading "Fortalece tu marca" [level=3] [ref=f8e260]
+        - paragraph [ref=f8e261]: Tu identidad profesional en una dirección solo tuya.
+      - generic [ref=f8e262]:
+        - heading "Ayuda a que los clientes te encuentren" [level=3] [ref=f8e263]
+        - paragraph [ref=f8e264]: Quien busca tu nombre en Google encuentra una presencia real.
+      - generic [ref=f8e265]:
+        - heading "Presenta tus servicios" [level=3] [ref=f8e266]
+        - paragraph [ref=f8e267]: Todo lo que haces, organizado de forma clara y profesional.
+      - generic [ref=f8e268]:
+        - heading "Genera contactos por WhatsApp" [level=3] [ref=f8e269]
+        - paragraph [ref=f8e270]: Convierte visitantes en conversaciones con un clic.
+      - generic [ref=f8e271]:
+        - heading "Muestra que tu negocio es serio" [level=3] [ref=f8e272]
+        - paragraph [ref=f8e273]: La confianza empieza por la primera impresión online.
+  - generic [ref=f8e274]:
+    - generic [ref=f8e275]:
+      - paragraph [ref=f8e276]: LO QUE VAS A APRENDER
+      - heading "Seis módulos prácticos, en el orden exacto" [level=2] [ref=f8e277]
+      - paragraph [ref=f8e278]: Desde cero hasta tu sitio publicado.
+    - generic [ref=f8e279]:
+      - generic [ref=f8e280]:
+        - text: "01"
+        - heading "Preparando tu presencia digital" [level=3] [ref=f8e281]
+        - paragraph [ref=f8e282]: Los fundamentos para empezar con el pie derecho y sin trabarte.
+      - generic [ref=f8e283]:
+        - text: "02"
+        - heading "Eligiendo y registrando tu dominio" [level=3] [ref=f8e284]
+        - paragraph [ref=f8e285]: Cómo asegurar la dirección propia de tu negocio en internet.
+      - generic [ref=f8e286]:
+        - text: "03"
+        - heading "Creando la estructura del sitio con IA" [level=3] [ref=f8e287]
+        - paragraph [ref=f8e288]: Usa la Inteligencia Artificial para armar la base de tu sitio rápido.
+      - generic [ref=f8e289]:
+        - text: "04"
+        - heading "Personalizando textos, imágenes y servicios" [level=3] [ref=f8e290]
+        - paragraph [ref=f8e291]: Deja el sitio con tu cara, tu identidad y tus servicios.
+      - generic [ref=f8e292]:
+        - text: "05"
+        - heading "Publicando tu sitio en internet" [level=3] [ref=f8e293]
+        - paragraph [ref=f8e294]: El paso a paso para poner todo al aire, accesible para cualquier cliente.
+      - generic [ref=f8e295]:
+        - text: "06"
+        - heading "Ajustes finales para dejar todo profesional" [level=3] [ref=f8e296]
+        - paragraph [ref=f8e297]: Los detalles que separan un sitio amateur de un sitio que genera confianza.
+  - generic [ref=f8e298]:
+    - generic [ref=f8e299]:
+      - heading "Menos tareas manuales, más tiempo para crecer" [level=2] [ref=f8e300]
+      - paragraph [ref=f8e301]: Conectamos tus herramientas y simplificamos el trabajo diario de tu negocio.
+    - generic [ref=f8e302]:
+      - article [ref=f8e303]:
+        - button "Automatización de procesos Eliminamos tareas manuales y repetitivas conectando tus herramientas. Automatizamos emails, WhatsApp, facturas, reportes y flujos de datos con n8n, Make y Zapier." [ref=f8e304] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f8e305]: ⚙️
+          - heading "Automatización de procesos" [level=3] [ref=f8e306]
+          - generic [ref=f8e307]: Eliminamos tareas manuales y repetitivas conectando tus herramientas. Automatizamos emails, WhatsApp, facturas, reportes y flujos de datos con n8n, Make y Zapier.
+        - list [ref=f8e308]:
+          - listitem [ref=f8e309]: ✓ Ahorro de horas semanales
+          - listitem [ref=f8e310]: ✓ Menos errores humanos
+          - listitem [ref=f8e311]: ✓ Escalable sin contratar
+      - article [ref=f8e312]:
+        - button "Sitios web y landing pages Webs premium optimizadas para SEO y conversión. Diseño mobile-first, carga ultrarrápida y copywriting orientado a captar leads y cerrar ventas." [ref=f8e313] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f8e314]: 🌐
+          - heading "Sitios web y landing pages" [level=3] [ref=f8e315]
+          - generic [ref=f8e316]: Webs premium optimizadas para SEO y conversión. Diseño mobile-first, carga ultrarrápida y copywriting orientado a captar leads y cerrar ventas.
+        - list [ref=f8e317]:
+          - listitem [ref=f8e318]: ✓ Core Web Vitals verdes
+          - listitem [ref=f8e319]: ✓ Captación de leads automática
+          - listitem [ref=f8e320]: ✓ Panel de administración incluido
+      - article [ref=f8e321]:
+        - 'button "Integraciones de software Conectamos tus sistemas: CRM, base de datos, pasarelas de pago, agenda y notificaciones. Todo fluye sin intervención manual." [ref=f8e322] [cursor=pointer]':
+          - generic [aria-hidden] [ref=f8e323]: 🔗
+          - heading "Integraciones de software" [level=3] [ref=f8e324]
+          - generic [ref=f8e325]: "Conectamos tus sistemas: CRM, base de datos, pasarelas de pago, agenda y notificaciones. Todo fluye sin intervención manual."
+        - list [ref=f8e326]:
+          - listitem [ref=f8e327]: ✓ API y webhooks
+          - listitem [ref=f8e328]: ✓ Sincronización en tiempo real
+          - listitem [ref=f8e329]: ✓ Documentación incluida
+      - article [ref=f8e330]:
+        - button "Optimización de conversión Auditoría CRO de tu web actual y rediseño de los puntos de contacto para aumentar la tasa de conversión de visitantes en clientes." [ref=f8e331] [cursor=pointer]:
+          - generic [aria-hidden] [ref=f8e332]: 📈
+          - heading "Optimización de conversión" [level=3] [ref=f8e333]
+          - generic [ref=f8e334]: Auditoría CRO de tu web actual y rediseño de los puntos de contacto para aumentar la tasa de conversión de visitantes en clientes.
+        - list [ref=f8e335]:
+          - listitem [ref=f8e336]: ✓ Test A/B de CTA
+          - listitem [ref=f8e337]: ✓ Copy de respuesta directa
+          - listitem [ref=f8e338]: ✓ Más ventas sin más tráfico
+  - generic [ref=f8e339]:
+    - generic [ref=f8e340]:
+      - heading "Bonos incluidos en tu acceso" [level=2] [ref=f8e341]
+      - paragraph [ref=f8e342]: Además de los 6 módulos, te llevas cuatro materiales prácticos para acelerar aún más el resultado.
+    - generic [ref=f8e343]:
+      - generic [ref=f8e344]:
+        - paragraph [ref=f8e345]: BONO 01
+        - heading "Prompts listos para crear sitios con IA" [level=3] [ref=f8e346]
+        - paragraph [ref=f8e347]: Copia, pega y adapta. Los comandos correctos para que la IA construya tu sitio sin que te trabes.
+      - generic [ref=f8e348]:
+        - paragraph [ref=f8e349]: BONO 02
+        - heading "Plantillas de estructura para profesionales independientes" [level=3] [ref=f8e350]
+        - paragraph [ref=f8e351]: Estructuras probadas de sitio, listas para tu tipo de negocio.
+      - generic [ref=f8e352]:
+        - paragraph [ref=f8e353]: BONO 03
+        - heading "Checklist de publicación del sitio" [level=3] [ref=f8e354]
+        - paragraph [ref=f8e355]: La lista completa para no olvidar nada antes de poner tu sitio en línea.
+      - generic [ref=f8e356]:
+        - paragraph [ref=f8e357]: BONO 04
+        - heading "Guía rápida para un sitio más confiable" [level=3] [ref=f8e358]
+        - paragraph [ref=f8e359]: Los ajustes finales que hacen que tu cliente confíe en tu trabajo desde el primer momento.
+  - generic [ref=f8e360]:
+    - generic [ref=f8e362]:
+      - generic [ref=f8e363]:
+        - heading "Empieza hoy a construir tu presencia profesional en internet" [level=2] [ref=f8e364]
+        - list [ref=f8e365]:
+          - listitem [ref=f8e366]:
+            - generic [ref=f8e370]: 6 módulos prácticos desde cero hasta la publicación
+          - listitem [ref=f8e371]:
+            - generic [ref=f8e375]: 4 bonos para acelerar tu resultado
+          - listitem [ref=f8e376]:
+            - generic [ref=f8e380]: Prompts de IA listos para usar
+          - listitem [ref=f8e381]:
+            - generic [ref=f8e385]: Acceso inmediato y 100% online
+          - listitem [ref=f8e386]:
+            - generic [ref=f8e390]: Aprende a usar tu dominio propio
+          - listitem [ref=f8e391]:
+            - generic [ref=f8e395]: Sin mensualidad — pago único
+      - generic [ref=f8e396]:
+        - generic [ref=f8e397]:
+          - generic [ref=f8e398]: ⚡
+          - text: Acceso completo al método
+        - paragraph [ref=f8e399]: De USD 197 por solo
+        - paragraph [ref=f8e400]: USD 12,90
+        - paragraph [ref=f8e401]: al contado
+        - link "Quiero acceder al Método ahora →" [ref=f8e402] [cursor=pointer]:
+          - /url: https://pay.hotmart.com/C106767554G?checkoutMode=10&utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=
+        - generic [ref=f8e403]:
+          - generic [ref=f8e404]:
+            - generic [ref=f8e405]: 🔒
+            - text: Pago seguro
+          - generic [ref=f8e406]: Acceso inmediato
+          - generic [ref=f8e407]: Contenido 100% online
+    - generic [ref=f8e408]:
+      - generic [ref=f8e409]: 7 días
+      - generic [ref=f8e410]:
+        - heading "Garantía de 7 días" [level=3] [ref=f8e411]
+        - paragraph [ref=f8e412]: Puedes acceder al contenido, seguir los primeros pasos y, si entiendes que el método no es para ti, puedes solicitar reembolso dentro del plazo de garantía. El riesgo es todo nuestro.
+  - generic [ref=f8e414]:
+    - generic [ref=f8e415]:
+      - paragraph [ref=f8e416]: RESERVA TU CITA
+      - heading "Agenda una llamada de 20 minutos" [level=2] [ref=f8e417]
+      - paragraph [ref=f8e418]: Elige día y hora. Hablaremos sobre tu negocio y el sitio web que necesitas, sin costo y sin compromiso.
+      - list [ref=f8e419]:
+        - listitem [ref=f8e420]:
+          - generic [aria-hidden] [ref=f8e421]: ✓
+          - generic [ref=f8e422]: Llamada gratuita de 20 minutos
+        - listitem [ref=f8e423]:
+          - generic [aria-hidden] [ref=f8e424]: ✓
+          - generic [ref=f8e425]: Propuesta inicial durante la llamada
+        - listitem [ref=f8e426]:
+          - generic [aria-hidden] [ref=f8e427]: ✓
+          - generic [ref=f8e428]: Confirmación por correo electrónico
+    - generic [ref=f8e429]:
+      - paragraph [ref=f8e430]: Consulta los horarios disponibles y elige directamente en Google Calendar el día y la hora que prefieras.
+      - link "Reservar en Google Calendar" [ref=f8e431] [cursor=pointer]:
+        - /url: https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0RCWadJSu-4I2KvZ1SF0R3PTCp9vjnCDNEwtWGiokIKm-mPVC6-5qGpdlIaGOQLVSRPA-IjGiK
+      - paragraph [ref=f8e432]: La página de reservas recopila tus datos y envía la confirmación por correo.
+  - generic [ref=f8e433]:
+    - generic [ref=f8e434]:
+      - heading "Preguntas frecuentes" [level=2] [ref=f8e435]
+      - paragraph [ref=f8e436]: ¿Te quedó alguna duda? Probablemente esté respondida aquí.
+    - generic [ref=f8e437]:
+      - group [ref=f8e438]:
+        - generic "¿Necesito saber programar?" [ref=f8e439] [cursor=pointer]
+      - group [ref=f8e444]:
+        - generic "¿Necesito contratar una agencia?" [ref=f8e445] [cursor=pointer]
+      - group [ref=f8e450]:
+        - generic "¿El sitio queda en mi dominio?" [ref=f8e451] [cursor=pointer]
+      - group [ref=f8e456]:
+        - generic "¿Sirve para cualquier profesión?" [ref=f8e457] [cursor=pointer]
+      - group [ref=f8e462]:
+        - generic "¿En cuánto tiempo logro publicar?" [ref=f8e463] [cursor=pointer]
+      - group [ref=f8e468]:
+        - generic "¿El acceso es inmediato?" [ref=f8e469] [cursor=pointer]
+  - generic [ref=f8e474]:
+    - generic [ref=f8e475]: www.tunegocio.com — en vivo
+    - heading "Tu negocio merece un sitio profesional" [level=2] [ref=f8e477]
+    - paragraph [ref=f8e478]: Deja de posponer tu presencia digital. Aprende a crear tu sitio, publicarlo en internet y transmitir más credibilidad a tus clientes.
+    - link "Crear mi sitio por USD 12,90 →" [ref=f8e479] [cursor=pointer]:
+      - /url: https://metodomeunegocioonline.com/es/#oferta
+    - paragraph [ref=f8e480]: De USD 197 por USD 12,90 · Garantía de 7 días · Acceso inmediato
+  - link "Contactar por WhatsApp" [ref=f8e481] [cursor=pointer]:
+    - /url: https://wa.me/18093025082
+    - generic [ref=f8e482]: WhatsApp

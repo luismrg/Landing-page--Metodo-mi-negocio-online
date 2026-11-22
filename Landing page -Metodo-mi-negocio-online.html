@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Método Mi Negocio Online — Crea el sitio de tu negocio en 1 día</title>
+<title>Tu web online — Crea el sitio de tu negocio en 72 horas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="icon" type="image/png" href="identidad/favicon.png"/>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
@@ -31,10 +32,51 @@
   }
 </script>
 <style>
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
   body { font-family: 'Inter', sans-serif; color: #51607B; background: #EEF2F9; }
   h1,h2,h3,h4 { font-family: 'Sora', sans-serif; color: #0A1730; }
   .eyebrow { font-family: 'JetBrains Mono', monospace; letter-spacing: 0.08em; }
+  .logo-bolt {
+    display: inline-block;
+    width: 14px;
+    height: 22px;
+    flex-shrink: 0;
+    background: #FF8A3D;
+    clip-path: polygon(58% 0, 15% 54%, 43% 54%, 29% 100%, 86% 38%, 57% 38%);
+  }
+  .logo-name { color: #F7F8FC; }
+  .logo-name-accent { color: #4F83F7; }
+  .nav-cta {
+    position: relative;
+    isolation: isolate;
+    border: 1px solid #16C079;
+    background: transparent;
+    color: #16C079;
+    transition: background-color .25s ease, color .25s ease;
+  }
+  .nav-cta::after {
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border: 1px solid rgba(22,192,121,0.8);
+    border-radius: inherit;
+    content: "";
+    pointer-events: none;
+    animation: cta-border-expand 1.8s ease-out infinite;
+  }
+  .nav-cta:hover, .nav-cta:focus-visible {
+    background: #16C079;
+    color: #fff;
+  }
+  @keyframes cta-border-expand {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.3); opacity: 0; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .nav-cta { animation: none; transition: none; }
+    .nav-cta::after { display: none; }
+  }
   .btn-primary {
     background: #16C079;
     color: #fff;
@@ -43,6 +85,33 @@
     font-family: 'Sora', sans-serif;
   }
   .btn-primary:hover { filter: brightness(1.05); transform: translateY(-1px); }
+  .booking-submit {
+    min-height: 48px;
+    border: 1px solid rgba(75,120,209,0.55);
+    border-radius: 9px;
+    background: #1A1F33;
+    color: #F3F5FA;
+    cursor: pointer;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+    padding: 0 16px;
+    box-shadow: 0 0 16px rgba(55,105,205,0.18);
+    transition: background-color .2s ease, border-color .2s ease, box-shadow .2s ease;
+  }
+  .booking-submit:hover,
+  .booking-submit:focus-visible {
+    border-color: #16C079;
+    background: #16C079;
+    color: #062217;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(22,192,121,0.2), 0 0 20px rgba(22,192,121,0.24);
+  }
+  .booking-submit:active { background: #16C079; transform: scale(0.98); }
+  @media (prefers-reduced-motion: reduce) {
+    .booking-submit { transition: none; }
+  }
   .btn-ghost {
     border-radius: 9999px;
   }
@@ -107,6 +176,135 @@
     transform: scale(1.12) rotate(6deg);
     background: rgba(22,192,121,0.22);
   }
+  .automation-card {
+    position: relative;
+    overflow: hidden;
+    min-height: 280px;
+    padding: 26px 22px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    background: #131a2b;
+    transition: transform .35s cubic-bezier(.22,.61,.36,1), box-shadow .25s, border-color .25s;
+  }
+  .automation-card::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #5B8CFF, #7C5CFF, #2BD576);
+    background-size: 200% 100%;
+    pointer-events: none;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .4s ease;
+  }
+  .automation-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(91,140,255,0.4);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  }
+  .automation-card:hover::before {
+    transform: scaleX(1);
+    animation: automation-gradient-shift 3s ease infinite;
+  }
+  .automation-card::after {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(220px circle at var(--mx,50%) var(--my,0%), rgba(91,140,255,.12), transparent 60%);
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .25s;
+  }
+  .automation-card:hover::after { opacity: 1; }
+  .automation-icon {
+    display: inline-block;
+    animation: automation-floaty 3.4s ease-in-out infinite;
+    animation-delay: calc(var(--i,0) * .2s);
+  }
+  .automation-card:hover .automation-icon { animation: automation-spin .7s ease; }
+  .automation-summary {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    color: inherit;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+  }
+  .automation-summary:focus-visible { outline: 2px solid #16C079; outline-offset: 4px; }
+  .automation-benefits {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 8px;
+    margin-top: 14px;
+  }
+  .automation-benefits li {
+    position: relative;
+    padding-left: 24px;
+    color: #AAB4C7;
+    font-size: .95rem;
+    opacity: 0;
+    transform: translateX(-8px);
+    transition: opacity .3s, transform .3s;
+  }
+  .automation-benefits li::before {
+    position: absolute;
+    left: 0;
+    color: #16C079;
+    content: "✓";
+    font-weight: 800;
+  }
+  .automation-card:hover .automation-benefits li,
+  .automation-card.is-expanded .automation-benefits li {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  .automation-benefits li:nth-child(1) { transition-delay: .05s; }
+  .automation-benefits li:nth-child(2) { transition-delay: .12s; }
+  .automation-benefits li:nth-child(3) { transition-delay: .19s; }
+  .automation-grid { perspective: 1000px; }
+  .automation-grid.is-animating .automation-card { opacity: 0; transform: translateY(24px); }
+  .automation-grid.is-visible .automation-card { animation: automation-fade-up .65s cubic-bezier(.22,.61,.36,1) both; }
+  .automation-grid.is-visible .automation-card:nth-child(1) { animation-delay: .05s; }
+  .automation-grid.is-visible .automation-card:nth-child(2) { animation-delay: .18s; }
+  .automation-grid.is-visible .automation-card:nth-child(3) { animation-delay: .31s; }
+  .automation-grid.is-visible .automation-card:nth-child(4) { animation-delay: .44s; }
+  @keyframes automation-fade-up {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes automation-floaty {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  @keyframes automation-gradient-shift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+  @keyframes automation-spin { to { transform: rotate(360deg); } }
+  @media (prefers-reduced-motion: reduce) {
+    .automation-card,
+    .automation-card::before,
+    .automation-card::after,
+    .automation-benefits li { transition: none; }
+    .automation-card:hover,
+    .automation-card:hover .automation-icon { transform: none; }
+    .automation-card:hover::before { animation: none; }
+    .automation-icon { animation: none; }
+    .automation-card:hover .automation-icon { animation: none; }
+    .automation-card:hover .automation-benefits li,
+    .automation-card.is-expanded .automation-benefits li { opacity: 1; transform: none; }
+    .automation-grid.is-animating .automation-card,
+    .automation-grid.is-visible .automation-card { opacity: 1; transform: none; animation: none; }
+  }
   @keyframes pulseGlow {
     0%, 100% { box-shadow: 0 10px 30px -8px rgba(22,192,121,0.55); }
     50% { box-shadow: 0 0 0 10px rgba(22,192,121,0.25), 0 10px 30px -8px rgba(22,192,121,0.55); }
@@ -119,12 +317,221 @@
     display: flex; align-items: center; justify-content: center;
     margin-top: 2px;
   }
+  .whatsapp-widget {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 60;
+  }
+  .whatsapp-panel {
+    position: absolute;
+    right: 0;
+    bottom: calc(100% + 16px);
+    width: min(360px, calc(100vw - 32px));
+    overflow: hidden;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 18px 48px rgba(10,23,48,.24);
+    transform-origin: bottom right;
+  }
+  .whatsapp-panel:not([hidden]) {
+    animation: whatsapp-panel-in .22s cubic-bezier(.22,.61,.36,1) both;
+  }
+  .whatsapp-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-height: 88px;
+    padding: 18px 20px;
+    background: #075E54;
+    color: #fff;
+  }
+  .whatsapp-avatar {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    place-items: center;
+    border: 2px solid rgba(255,255,255,.75);
+    border-radius: 50%;
+    background: #fff;
+    color: #075E54;
+    font-family: 'Sora', sans-serif;
+    font-size: 19px;
+    font-weight: 800;
+  }
+  .whatsapp-close {
+    display: grid;
+    width: 40px;
+    height: 40px;
+    flex: 0 0 40px;
+    place-items: center;
+    margin-left: auto;
+    border: 0;
+    border-radius: 50%;
+    background: transparent;
+    color: #fff;
+    cursor: pointer;
+    font: inherit;
+    font-size: 26px;
+    line-height: 1;
+  }
+  .whatsapp-close:hover { background: rgba(255,255,255,.12); }
+  .whatsapp-close:focus-visible,
+  .whatsapp-trigger:focus-visible,
+  .whatsapp-start:focus-visible {
+    outline: 3px solid #0A1730;
+    outline-offset: 3px;
+  }
+  .whatsapp-close:focus-visible { outline-color: #fff; }
+  .whatsapp-message-area {
+    padding: 24px 20px;
+    background: #F1ECE5;
+  }
+  .whatsapp-message {
+    position: relative;
+    border-radius: 4px 18px 18px 18px;
+    background: #fff;
+    padding: 17px 18px;
+    color: #15231F;
+    font-size: 15px;
+    line-height: 1.65;
+    box-shadow: 0 2px 4px rgba(10,23,48,.06);
+  }
+  .whatsapp-message strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #0A1730;
+    font-family: 'Sora', sans-serif;
+    font-size: 16px;
+  }
+  .whatsapp-start-area { padding: 14px 20px 18px; }
+  .whatsapp-start {
+    display: flex;
+    min-height: 50px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 9999px;
+    background: #075E54;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    transition: background-color .2s ease, color .2s ease, transform .2s ease;
+  }
+  .whatsapp-start:hover { background: #25D366; color: #063B20; }
+  .whatsapp-start:active { transform: scale(.98); }
+  .whatsapp-icon { display: block; width: 24px; height: 24px; }
+  .whatsapp-trigger {
+    position: relative;
+    isolation: isolate;
+    display: grid;
+    width: 60px;
+    height: 60px;
+    place-items: center;
+    border: 0;
+    border-radius: 50%;
+    background: #075E54;
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(10,23,48,.24);
+    cursor: pointer;
+    transition: background-color .2s ease, transform .2s ease;
+  }
+  .whatsapp-trigger::before {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    border-radius: inherit;
+    background: #075E54;
+    content: "";
+    opacity: 0;
+    pointer-events: none;
+    animation: whatsapp-trigger-expand 2.6s ease-out infinite;
+  }
+  .whatsapp-trigger:hover,
+  .whatsapp-trigger:focus-visible {
+    background: #25D366;
+    transform: translateY(-2px);
+  }
+  .whatsapp-trigger:hover::before,
+  .whatsapp-trigger:focus-visible::before { animation: none; }
+  .whatsapp-trigger:active {
+    transform: scale(.96);
+  }
+  .whatsapp-trigger:active::before { animation: none; }
+  @keyframes whatsapp-trigger-expand {
+    0% { transform: scale(1); opacity: .48; }
+    100% { transform: scale(1.65); opacity: 0; }
+  }
+  @keyframes whatsapp-panel-in {
+    from { opacity: 0; transform: translateY(8px) scale(.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+  }
+  @media (max-width: 480px) {
+    .whatsapp-widget { right: 16px; bottom: 16px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .whatsapp-panel:not([hidden]) { animation: none; }
+    .whatsapp-start,
+    .whatsapp-trigger { transition: none; }
+    .whatsapp-trigger::before { animation: none; }
+  }
+  .site-footer {
+    border-top: 1px solid rgba(10, 23, 48, 0.05);
+    background: #fff;
+  }
+  .site-footer a {
+    transition: color .2s ease;
+  }
+  .site-footer a:hover,
+  .site-footer a:focus-visible {
+    color: #0A1730;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .site-footer a { transition: none; }
+  }
 </style>
 </head>
 <body class="antialiased">
 
+<header class="sticky top-0 z-40 border-b border-white/10 bg-primary/95 text-white backdrop-blur">
+  <div class="mx-auto flex h-[68px] max-w-7xl items-center justify-between gap-3 px-4 sm:px-6">
+    <a href="#top" class="inline-flex min-w-0 items-center gap-2.5 font-heading font-bold tracking-tight text-white" aria-label="Digloff, inicio">
+      <span class="logo-bolt" aria-hidden="true"></span>
+      <span class="whitespace-nowrap text-sm sm:text-base"><span class="logo-name">Dig</span><span class="logo-name-accent">loff</span></span>
+    </a>
+
+    <nav aria-label="Navegación principal" class="hidden items-center gap-5 lg:flex xl:gap-6">
+      <a class="text-sm text-white/75 transition hover:text-accent" href="#servicios">Servicios</a>
+      <a class="text-sm text-white/75 transition hover:text-accent" href="#automatizaciones">Automatizaciones</a>
+      <a class="text-sm text-white/75 transition hover:text-accent" href="#beneficios">Beneficios</a>
+      <a class="text-sm text-white/75 transition hover:text-accent" href="#proceso">Proceso</a>
+      <a class="text-sm text-white/75 transition hover:text-accent" href="#reservas">Reservas</a>
+      <a class="text-sm text-white/75 transition hover:text-accent" href="#faq">FAQ</a>
+      <a class="text-sm text-white/75 transition hover:text-accent" href="https://wa.me/18093025082" target="_blank" rel="noopener noreferrer">Contacto</a>
+    </nav>
+
+    <details id="mobileMenu" class="relative ml-auto lg:hidden">
+      <summary class="rounded-lg border border-white/15 px-3 py-2 text-sm font-medium text-white transition hover:border-accent hover:text-accent">Menú</summary>
+      <nav aria-label="Navegación móvil" class="absolute right-0 top-[calc(100%+0.75rem)] z-50 grid min-w-48 gap-1 rounded-xl border border-white/10 bg-primary p-2 shadow-xl">
+        <a class="rounded-lg px-3 py-2.5 text-sm text-white/80 transition hover:bg-white/5 hover:text-accent" href="#servicios">Servicios</a>
+        <a class="rounded-lg px-3 py-2.5 text-sm text-white/80 transition hover:bg-white/5 hover:text-accent" href="#automatizaciones">Automatizaciones</a>
+        <a class="rounded-lg px-3 py-2.5 text-sm text-white/80 transition hover:bg-white/5 hover:text-accent" href="#beneficios">Beneficios</a>
+        <a class="rounded-lg px-3 py-2.5 text-sm text-white/80 transition hover:bg-white/5 hover:text-accent" href="#proceso">Proceso</a>
+        <a class="rounded-lg px-3 py-2.5 text-sm text-white/80 transition hover:bg-white/5 hover:text-accent" href="#reservas">Reservas</a>
+        <a class="rounded-lg px-3 py-2.5 text-sm text-white/80 transition hover:bg-white/5 hover:text-accent" href="#faq">FAQ</a>
+        <a class="rounded-lg px-3 py-2.5 text-sm text-white/80 transition hover:bg-white/5 hover:text-accent" href="https://wa.me/18093025082" target="_blank" rel="noopener noreferrer">Contacto</a>
+      </nav>
+    </details>
+
+    <a href="https://wa.me/18093025082" target="_blank" rel="noopener noreferrer" class="nav-cta inline-flex shrink-0 items-center justify-center whitespace-nowrap rounded-lg px-3 py-2 text-xs font-semibold focus-visible:outline focus-visible:outline-2 focus-visible:outline-accent sm:px-4 sm:text-sm">
+      Hablar ahora
+    </a>
+  </div>
+</header>
+
 <!-- ================= HERO ================= -->
-<section class="relative bg-primary overflow-hidden">
+<section id="top" class="relative scroll-mt-20 bg-primary overflow-hidden">
   <div class="absolute inset-0 opacity-[0.35]" style="background-image:linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px); background-size: 42px 42px;"></div>
   <div class="absolute -left-40 top-0 w-[520px] h-[520px] rounded-full bg-accent/10 blur-3xl"></div>
   <div class="absolute right-0 top-1/3 w-[420px] h-[420px] rounded-full bg-accent/5 blur-3xl"></div>
@@ -133,32 +540,34 @@
 
     <!-- left: copy -->
     <div>
-      <h1 class="text-white text-[36px] leading-[1.12] md:text-[54px] md:leading-[1.1] font-extrabold">
-        Crea el sitio profesional de tu negocio en
-        <span class="text-accent border-b-4 border-accent inline-block pb-1">solo 1 día</span>
-        y ahorra cientos de dólares
+      <h1 class="max-w-2xl font-heading text-[38px] font-extrabold leading-[1.08] tracking-[-.035em] text-white md:text-[52px]">
+        Tu negocio merece una web profesional.
       </h1>
+      <p class="mt-5 max-w-lg font-heading text-[21px] font-semibold leading-[1.3] text-white/75 md:text-[25px]">
+        La creamos en <span class="inline-block whitespace-nowrap border-b-2 border-accent pb-1 text-accent">solo 3 días</span>
+        para que ahorres cientos de dólares.
+      </p>
       <p class="text-white/60 text-base md:text-lg max-w-md mt-6">
-        Mismo que nunca hayas creado un sitio. Del dominio a la publicación con Inteligencia Artificial — y sin necesidad de programar.
+        Tu sitios web en linea. Del dominio a la publicación actualizada — y adaptada a los dispositivos móviles.
       </p>
 
       <div class="mt-8">
-        <a href="#oferta-final" class="btn-primary inline-flex items-center gap-2 px-8 py-4 font-semibold text-base">
+        <a href="https://www.paypal.com/ncp/payment/F95YDPTQ8JC84" class="btn-primary inline-flex items-center gap-2 px-8 py-4 font-semibold text-base">
           Quiero crear mi sitio ahora →
         </a>
         <div class="flex flex-wrap gap-x-5 gap-y-1.5 text-white/50 eyebrow text-xs mt-4">
           <span class="flex items-center gap-1.5"><span class="text-accent">✓</span> Acceso inmediato</span>
           <span class="flex items-center gap-1.5"><span class="text-accent">✓</span> Paso a paso desde cero</span>
-          <span class="flex items-center gap-1.5"><span class="text-accent">✓</span> Sin necesidad de programar</span>
+          <span class="flex items-center gap-1.5"><span class="text-accent">✓</span> Sin necesidad de pagar más</span>
         </div>
       </div>
 
       <!-- stats -->
       <div class="mt-14 pt-7 border-t border-white/10 grid grid-cols-2 gap-x-6 gap-y-5 lg:flex lg:flex-nowrap lg:gap-x-9 lg:items-baseline">
-        <div class="flex items-baseline gap-1.5 whitespace-nowrap"><span class="text-white font-heading font-bold text-xl lg:text-2xl">1 día</span><span class="text-white/40 eyebrow text-[10px] uppercase">para publicar</span></div>
+        <div class="flex items-baseline gap-1.5 whitespace-nowrap"><span class="text-white font-heading font-bold text-xl lg:text-2xl">3 días</span><span class="text-white/40 eyebrow text-[10px] uppercase">para publicar</span></div>
         <div class="flex items-baseline gap-1.5 whitespace-nowrap"><span class="text-white font-heading font-bold text-xl lg:text-2xl">6</span><span class="text-white/40 eyebrow text-[10px] uppercase">módulos prácticos</span></div>
         <div class="flex items-baseline gap-1.5 whitespace-nowrap"><span class="text-white font-heading font-bold text-xl lg:text-2xl">4</span><span class="text-white/40 eyebrow text-[10px] uppercase">bonos incluidos</span></div>
-        <div class="flex items-baseline gap-1.5 whitespace-nowrap"><span class="text-white font-heading font-bold text-xl lg:text-2xl">0</span><span class="text-white/40 eyebrow text-[10px] uppercase">líneas de código</span></div>
+        <div class="flex items-baseline gap-1.5 whitespace-nowrap"><span class="text-white font-heading font-bold text-xl lg:text-2xl"></span></div>
       </div>
     </div>
 
@@ -211,6 +620,26 @@
     setInterval(()=> show((i+1) % slides.length), 4000);
   })();
 </script>
+
+<!-- ================= GALERÍA ================= -->
+<section class="py-24 px-6 bg-primary">
+  <div class="max-w-2xl mx-auto text-center">
+    <h2 class="text-2xl md:text-[38px] font-bold leading-tight text-white">Mira el tipo de sitio que puede obtener</h2>
+    <p class="mt-5 text-base md:text-lg text-white/60">Todos estos ejemplos se pueden hacer con el paso a paso con el dominio propio, aspecto profesional y listos para recibir clientes. Desde cero, sin programar.</p>
+  </div>
+  <div class="max-w-6xl mx-auto mt-14 grid md:grid-cols-2 gap-8">
+    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/arquitectura-almeida-vargas-ofo87J6H.webp')" role="img" aria-label="Sitio de Arquitectura — Almeida & Vargas"></div>
+    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/abogacia-vasconcelos-rodrigues-mb6fxODE.webp')" role="img" aria-label="Sitio de Abogacía — Vasconcelos Rodrigues"></div>
+    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/odontologia-sonrisa-alineado-CfyZ_qQk.webp')" role="img" aria-label="Sitio de Odontología — Sonrisa & Alineado"></div>
+    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/cardiologia-rafael-mendes-BLn7vxio.webp')" role="img" aria-label="Sitio de Cardiología — Dr. Rafael Mendes"></div>
+    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/pediatria-laura-carvalho-CcB5heHN.webp')" role="img" aria-label="Sitio de Pediatría — Dra. Laura Carvalho"></div>
+    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/contabilidad-contabilize-BEgIJdqE.webp')" role="img" aria-label="Sitio de Contabilidad — Contabilize"></div>
+  </div>
+  <div class="text-center mt-12">
+    <a href="https://www.paypal.com/ncp/payment/F95YDPTQ8JC84" class="btn-primary inline-flex items-center gap-2 px-8 py-4 font-semibold text-base">Quiero crear mi sitio ahora →</a>
+    <p class="text-sm text-white/50 mt-4">Creamos tu sitio web a la medida </p>
+  </div>
+</section>
 
 <!-- ================= PROBLEMA ================= -->
 <section class="py-20 px-6">
@@ -269,10 +698,10 @@
 </section>
 
 <!-- ================= PROCESO 6 ETAPAS ================= -->
-<section class="py-24 px-6 bg-primary">
+<section id="proceso" class="scroll-mt-20 py-24 px-6 bg-primary">
   <div class="max-w-4xl mx-auto text-center">
     <h2 class="text-2xl md:text-[38px] font-bold leading-tight text-white">De cero al sitio publicado, sin saltarte ninguna etapa</h2>
-    <p class="mt-5 text-base md:text-lg text-white/60">Con el Método Mi Negocio Online sigues un camino completo — cada etapa desbloquea la siguiente hasta que tu sitio esté en línea.</p>
+    <p class="mt-5 text-base md:text-lg text-white/60">Con Digloff creamos un sitio web completo — cada etapa desbloquea la siguiente hasta que tu sitio esté en línea.</p>
   </div>
 
   <div class="max-w-6xl mx-auto mt-14 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -349,7 +778,7 @@
 <!-- ================= COMPARATIVA ================= -->
 <section class="py-20 px-6 bg-white">
   <div class="max-w-4xl mx-auto text-center">
-    <h2 class="text-2xl md:text-[38px] font-bold leading-tight">¿Agencia o Método Mi Negocio Online?</h2>
+    <h2 class="text-2xl md:text-[38px] font-bold leading-tight">¿Agencia tu sitio web online?</h2>
     <p class="mt-5 text-base md:text-lg">El mismo resultado — un sitio profesional en línea — por dos caminos muy diferentes.</p>
   </div>
   <div class="max-w-4xl mx-auto mt-12 grid md:grid-cols-2 gap-6">
@@ -369,23 +798,23 @@
     </div>
     <div class="relative border-2 border-accent rounded-2xl p-7 bg-primary text-white">
       <span class="absolute -top-3 left-7 bg-accent text-white text-[10px] font-heading font-semibold rounded-full px-3 py-1">Recomendado</span>
-      <p class="eyebrow text-xs text-accent">LA FORMA AUTÓNOMA</p>
-      <h3 class="font-heading font-bold text-xl mt-2 text-white">Método Mi Negocio Online</h3>
+      <p class="eyebrow text-xs text-accent">PLAN ANUAL</p>
+      <h3 class="font-heading font-bold text-xl mt-2 text-white">Tu web online</h3>
       <ul class="mt-5 space-y-3 text-sm text-white/80">
-        <li class="flex gap-2"><span class="text-accent">✓</span>Sitio profesional publicado en hasta 1 día</li>
+        <li class="flex gap-2"><span class="text-accent">✓</span>Sitio profesional publicado en hasta 72 horas</li>
         <li class="flex gap-2"><span class="text-accent">✓</span>Registra y usa tu propio dominio (tunegocio.com)</li>
         <li class="flex gap-2"><span class="text-accent">✓</span>Paso a paso simple, incluso para principiantes</li>
         <li class="flex gap-2"><span class="text-accent">✓</span>Usa IA para acelerar todo el proceso</li>
         <li class="flex gap-2"><span class="text-accent">✓</span>Tú mismo editas cuando quieras, sin depender de nadie</li>
         <li class="flex gap-2"><span class="text-accent">✓</span>Tu sitio se ve perfecto en computadora y celular</li>
-        <li class="flex gap-2"><span class="text-accent">✓</span>Acceso de por vida + actualizaciones</li>
+        <li class="flex gap-2"><span class="text-accent">✓</span>Acceso los 365 días del año + actualizaciones</li>
         <li class="flex gap-2"><span class="text-accent">✓</span>Soporte por correo si te trabas</li>
       </ul>
       <div class="mt-6 pt-6 border-t border-white/15">
         <p class="text-xs text-white/50 line-through">Una agencia cobra de USD 400 a USD 1.000</p>
-        <p class="font-heading font-bold text-3xl text-white mt-1">USD 12,90</p>
-        <p class="text-xs text-white/50">pago único — sin mensualidad</p>
-        <a href="https://metodomeunegocioonline.com/es/#oferta" class="btn-primary mt-5 inline-flex items-center gap-2 px-7 py-3.5 font-semibold text-sm">Quiero ahorrar ahora →</a>
+        <p class="font-heading font-bold text-3xl text-white mt-1">USD 209.00</p>
+        <p class="text-xs text-white/50">Subscription - anual </p>
+        <a href="https://www.paypal.com/ncp/payment/F95YDPTQ8JC84" class="btn-primary mt-5 inline-flex items-center gap-2 px-7 py-3.5 font-semibold text-sm">Quiero ahorrar ahora →</a>
         <p class="text-white/40 text-[11px] mt-3">Acceso inmediato · Pago seguro · Garantía de 7 días</p>
       </div>
     </div>
@@ -414,28 +843,8 @@
   </div>
 </section>
 
-<!-- ================= GALERÍA ================= -->
-<section class="py-24 px-6 bg-primary">
-  <div class="max-w-2xl mx-auto text-center">
-    <h2 class="text-2xl md:text-[38px] font-bold leading-tight text-white">Mira el tipo de sitio que vas a poder crear</h2>
-    <p class="mt-5 text-base md:text-lg text-white/60">Todos estos ejemplos se pueden hacer con el paso a paso del método — con dominio propio, aspecto profesional y listos para recibir clientes. Desde cero, sin programar.</p>
-  </div>
-  <div class="max-w-6xl mx-auto mt-14 grid md:grid-cols-2 gap-8">
-    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/arquitectura-almeida-vargas-ofo87J6H.webp')" role="img" aria-label="Sitio de Arquitectura — Almeida & Vargas"></div>
-    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/abogacia-vasconcelos-rodrigues-mb6fxODE.webp')" role="img" aria-label="Sitio de Abogacía — Vasconcelos Rodrigues"></div>
-    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/odontologia-sonrisa-alineado-CfyZ_qQk.webp')" role="img" aria-label="Sitio de Odontología — Sonrisa & Alineado"></div>
-    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/cardiologia-rafael-mendes-BLn7vxio.webp')" role="img" aria-label="Sitio de Cardiología — Dr. Rafael Mendes"></div>
-    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/pediatria-laura-carvalho-CcB5heHN.webp')" role="img" aria-label="Sitio de Pediatría — Dra. Laura Carvalho"></div>
-    <div class="site-scroll rounded-2xl h-[440px] md:h-[480px] shadow-2xl border border-white/10" style="background-image:url('https://metodomeunegocioonline.com/assets/contabilidad-contabilize-BEgIJdqE.webp')" role="img" aria-label="Sitio de Contabilidad — Contabilize"></div>
-  </div>
-  <div class="text-center mt-12">
-    <a href="https://metodomeunegocioonline.com/es/#oferta" class="btn-primary inline-flex items-center gap-2 px-8 py-4 font-semibold text-base">Quiero crear mi sitio ahora →</a>
-    <p class="text-sm text-white/50 mt-4">Cada uno de estos pasó de cero al aire en 1 día</p>
-  </div>
-</section>
-
 <!-- ================= BENEFICIOS ================= -->
-<section class="py-20 px-6">
+<section id="beneficios" class="scroll-mt-20 py-20 px-6">
   <div class="max-w-3xl mx-auto text-center">
     <h2 class="text-2xl md:text-[38px] font-bold leading-tight">¿Por qué tener un sitio profesional?</h2>
     <p class="mt-5 text-base md:text-lg">No se trata de estar en internet. Se trata de que te tomen en serio quienes van a contratarte.</p>
@@ -447,14 +856,13 @@
     <div class="bg-white rounded-2xl p-6"><h3 class="font-heading font-semibold text-primary">Presenta tus servicios</h3><p class="text-sm mt-2">Todo lo que haces, organizado de forma clara y profesional.</p></div>
     <div class="bg-white rounded-2xl p-6"><h3 class="font-heading font-semibold text-primary">Genera contactos por WhatsApp</h3><p class="text-sm mt-2">Convierte visitantes en conversaciones con un clic.</p></div>
     <div class="bg-white rounded-2xl p-6"><h3 class="font-heading font-semibold text-primary">Muestra que tu negocio es serio</h3><p class="text-sm mt-2">La confianza empieza por la primera impresión online.</p></div>
-    <div class="bg-white rounded-2xl p-6 sm:col-span-2 lg:col-span-1"><h3 class="font-heading font-semibold text-primary">Reduce la dependencia de las redes</h3><p class="text-sm mt-2">Dejas de depender solo de algoritmos que no controlas.</p></div>
   </div>
 </section>
 
 <!-- ================= MÓDULOS ================= -->
-<section class="py-20 px-6 bg-primary">
+<section id="servicios" class="scroll-mt-20 py-20 px-6 bg-primary">
   <div class="max-w-3xl mx-auto text-center">
-    <p class="eyebrow text-xs text-accent">LO QUE VAS A APRENDER</p>
+    <p class="eyebrow text-xs text-accent">SERVICIOS</p>
     <h2 class="text-2xl md:text-[38px] font-bold leading-tight text-white mt-3">Seis módulos prácticos, en el orden exacto</h2>
     <p class="mt-5 text-base md:text-lg text-white/70">Desde cero hasta tu sitio publicado.</p>
   </div>
@@ -468,6 +876,68 @@
   </div>
 </section>
 
+<!-- ================= AUTOMATIZACIONES ================= -->
+<section id="automatizaciones" class="scroll-mt-20 bg-[#0B101B] px-6 py-20 md:py-24">
+  <div class="mx-auto max-w-3xl text-center">
+    <h2 class="text-2xl font-bold leading-tight text-white md:text-[38px]">Menos tareas manuales, más tiempo para crecer</h2>
+    <p class="mt-5 text-base text-white/65 md:text-lg">Conectamos tus herramientas y simplificamos el trabajo diario de tu negocio.</p>
+  </div>
+
+  <div class="automation-grid mx-auto mt-12 grid max-w-6xl gap-4 sm:grid-cols-2">
+    <article class="automation-card">
+      <button id="automationToggle" class="automation-summary" type="button" aria-expanded="false" aria-controls="automation-benefits">
+        <span class="automation-icon text-[26px] leading-none" aria-hidden="true">⚙️</span>
+        <span class="mt-5 block font-heading text-lg font-semibold text-[#E5EAF2]" role="heading" aria-level="3">Automatización de procesos</span>
+        <span class="mt-1 block text-[15px] leading-6 text-[#AAB4C7]">Eliminamos tareas manuales y repetitivas conectando tus herramientas. Automatizamos emails, WhatsApp, facturas, reportes y flujos de datos con n8n, Make y Zapier.</span>
+      </button>
+      <ul id="automation-benefits" class="automation-benefits">
+        <li>Ahorro de horas semanales</li>
+        <li>Menos errores humanos</li>
+        <li>Escalable sin contratar</li>
+      </ul>
+    </article>
+
+    <article class="automation-card">
+      <button id="automationToggleWeb" class="automation-summary" type="button" aria-expanded="false" aria-controls="automationBenefitsWeb">
+        <span class="automation-icon text-[26px] leading-none" aria-hidden="true">🌐</span>
+        <span class="mt-5 block font-heading text-lg font-semibold text-[#E5EAF2]" role="heading" aria-level="3">Sitios web y landing pages</span>
+        <span class="mt-1 block text-[15px] leading-6 text-[#AAB4C7]">Webs premium optimizadas para SEO y conversión. Diseño mobile-first, carga ultrarrápida y copywriting orientado a captar leads y cerrar ventas.</span>
+      </button>
+      <ul id="automationBenefitsWeb" class="automation-benefits">
+        <li>Core Web Vitals verdes</li>
+        <li>Captación de leads automática</li>
+        <li>Panel de administración incluido</li>
+      </ul>
+    </article>
+
+    <article class="automation-card">
+      <button id="automationToggleIntegrations" class="automation-summary" type="button" aria-expanded="false" aria-controls="automationBenefitsIntegrations">
+        <span class="automation-icon text-[26px] leading-none" aria-hidden="true">🔗</span>
+        <span class="mt-5 block font-heading text-lg font-semibold text-[#E5EAF2]" role="heading" aria-level="3">Integraciones de software</span>
+        <span class="mt-1 block text-[15px] leading-6 text-[#AAB4C7]">Conectamos tus sistemas: CRM, base de datos, pasarelas de pago, agenda y notificaciones. Todo fluye sin intervención manual.</span>
+      </button>
+      <ul id="automationBenefitsIntegrations" class="automation-benefits">
+        <li>API y webhooks</li>
+        <li>Sincronización en tiempo real</li>
+        <li>Documentación incluida</li>
+      </ul>
+    </article>
+
+    <article class="automation-card">
+      <button id="automationToggleConversion" class="automation-summary" type="button" aria-expanded="false" aria-controls="automationBenefitsConversion">
+        <span class="automation-icon text-[26px] leading-none" aria-hidden="true">📈</span>
+        <span class="mt-5 block font-heading text-lg font-semibold text-[#E5EAF2]" role="heading" aria-level="3">Optimización de conversión</span>
+        <span class="mt-1 block text-[15px] leading-6 text-[#AAB4C7]">Auditoría CRO de tu web actual y rediseño de los puntos de contacto para aumentar la tasa de conversión de visitantes en clientes.</span>
+      </button>
+      <ul id="automationBenefitsConversion" class="automation-benefits">
+        <li>Test A/B de CTA</li>
+        <li>Copy de respuesta directa</li>
+        <li>Más ventas sin más tráfico</li>
+      </ul>
+    </article>
+  </div>
+</section>
+
 <!-- ================= BONOS ================= -->
 <section class="py-20 px-6 bg-white">
   <div class="max-w-3xl mx-auto text-center">
@@ -475,7 +945,7 @@
     <p class="mt-5 text-base md:text-lg">Además de los 6 módulos, te llevas cuatro materiales prácticos para acelerar aún más el resultado.</p>
   </div>
   <div class="max-w-5xl mx-auto mt-12 grid sm:grid-cols-2 gap-5">
-    <div class="bg-bg rounded-2xl p-6"><p class="eyebrow text-xs text-accent">BONO 01</p><h3 class="font-heading font-semibold text-primary mt-2">Prompts listos para crear sitios con IA</h3><p class="text-sm mt-2">Copia, pega y adapta. Los comandos correctos para que la IA construya tu sitio sin que te trabes.</p></div>
+    <div class="bg-bg rounded-2xl p-6"><p class="eyebrow text-xs text-accent">BONO 01</p><h3 class="font-heading font-semibold text-primary mt-2">Respaldo y garantía del sitio web</h3><p class="text-sm mt-2">Brindamos soporte los 365 días del ano a través de correo y por WhatsApp adaptando tu web a tus necesidades sin que te trabes.</p></div>
     <div class="bg-bg rounded-2xl p-6"><p class="eyebrow text-xs text-accent">BONO 02</p><h3 class="font-heading font-semibold text-primary mt-2">Plantillas de estructura para profesionales independientes</h3><p class="text-sm mt-2">Estructuras probadas de sitio, listas para tu tipo de negocio.</p></div>
     <div class="bg-bg rounded-2xl p-6"><p class="eyebrow text-xs text-accent">BONO 03</p><h3 class="font-heading font-semibold text-primary mt-2">Checklist de publicación del sitio</h3><p class="text-sm mt-2">La lista completa para no olvidar nada antes de poner tu sitio en línea.</p></div>
     <div class="bg-bg rounded-2xl p-6"><p class="eyebrow text-xs text-accent">BONO 04</p><h3 class="font-heading font-semibold text-primary mt-2">Guía rápida para un sitio más confiable</h3><p class="text-sm mt-2">Los ajustes finales que hacen que tu cliente confíe en tu trabajo desde el primer momento.</p></div>
@@ -498,20 +968,20 @@
           <li class="flex items-start gap-3"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-white/85">Prompts de IA listos para usar</span></li>
           <li class="flex items-start gap-3"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-white/85">Acceso inmediato y 100% online</span></li>
           <li class="flex items-start gap-3"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-white/85">Aprende a usar tu dominio propio</span></li>
-          <li class="flex items-start gap-3"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-white/85">Sin mensualidad — pago único</span></li>
+          <li class="flex items-start gap-3"><span class="check-dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="w-3 h-3"><polyline points="20 6 9 17 4 12"/></svg></span><span class="text-white/85">Sin mensualidad — pago anual</span></li>
         </ul>
       </div>
 
       <!-- right: price card -->
       <div class="bg-[#0A1730] border border-white/10 rounded-2xl p-8">
         <span class="inline-flex items-center gap-2 eyebrow text-[11px] text-white/50 uppercase">
-          <span class="text-violet-400">⚡</span> Acceso completo al método
+          <span class="text-violet-400">⚡</span> Acceso completo 
         </span>
-        <p class="text-white/50 text-sm mt-5">De <span class="line-through">USD 197</span> por solo</p>
-        <p class="font-heading font-extrabold text-white text-[44px] leading-none mt-1">USD 12,90</p>
+        <p class="text-white/50 text-sm mt-5">De <span class="line-through">USD 400</span> por solo</p>
+        <p class="font-heading font-extrabold text-white text-[44px] leading-none mt-1">USD 209.00</p>
         <p class="text-accent eyebrow text-xs mt-2">al contado</p>
 
-        <a href="https://pay.hotmart.com/C106767554G?checkoutMode=10&utm_source=organic&utm_campaign=&utm_medium=&utm_content=&utm_term=&xcod=&sck=" class="btn-primary w-full mt-7 inline-flex justify-center items-center gap-2 px-7 py-4 font-semibold text-base text-center leading-snug">Quiero acceder al Método ahora →</a>
+        <a href="https://www.paypal.com/ncp/payment/F95YDPTQ8JC84" class="btn-primary w-full mt-7 inline-flex justify-center items-center gap-2 px-7 py-4 font-semibold text-base text-center leading-snug">Quiero acceder al Método ahora →</a>
 
         <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-1 eyebrow text-[10px] text-white/40 uppercase mt-5">
           <span class="flex items-center gap-1.5"><span class="text-accent">🔒</span>Pago seguro</span>
@@ -532,8 +1002,34 @@
   </div>
 </section>
 
+<!-- ================= RESERVAS ================= -->
+<section id="reservas" class="scroll-mt-20 bg-[#080D18] px-6 py-20 md:py-24">
+  <div class="mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
+    <div class="max-w-xl">
+      <p class="eyebrow text-xs font-bold text-blue-400">RESERVA TU CITA</p>
+      <h2 class="mt-4 text-3xl font-extrabold leading-tight text-white md:text-[42px]">Agenda una llamada de 20 minutos</h2>
+      <p class="mt-5 text-base leading-relaxed text-white/65 md:text-lg">Elige día y hora. Hablaremos sobre tu negocio y el sitio web que necesitas, sin costo y sin compromiso.</p>
+      <ul class="mt-6 space-y-3 text-sm text-white/70 md:text-base">
+        <li class="flex items-start gap-3"><span class="font-bold text-accent" aria-hidden="true">✓</span><span>Llamada gratuita de 20 minutos</span></li>
+        <li class="flex items-start gap-3"><span class="font-bold text-accent" aria-hidden="true">✓</span><span>Propuesta inicial durante la llamada</span></li>
+        <li class="flex items-start gap-3"><span class="font-bold text-accent" aria-hidden="true">✓</span><span>Confirmación por correo electrónico</span></li>
+      </ul>
+    </div>
+
+    <div class="rounded-2xl border border-white/10 bg-[#111A2C] p-6 shadow-2xl sm:p-8">
+      <p class="text-base leading-relaxed text-white/75">Consulta los horarios disponibles y elige directamente en Google Calendar el día y la hora que prefieras.</p>
+      <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0RCWadJSu-4I2KvZ1SF0R3PTCp9vjnCDNEwtWGiokIKm-mPVC6-5qGpdlIaGOQLVSRPA-IjGiK"
+        target="_blank" rel="noopener noreferrer"
+        class="booking-submit mt-6 inline-flex w-full items-center justify-center px-6 py-4 text-center text-base no-underline">
+        Reservar cita
+      </a>
+      <p class="mt-3 text-xs leading-relaxed text-white/65">La agenda se abre en una pestaña nueva y sigue disponible para las próximas reservas. Google Calendar confirma cada cita por correo.</p>
+    </div>
+  </div>
+</section>
+
 <!-- ================= FAQ ================= -->
-<section class="py-24 px-6">
+<section id="faq" class="scroll-mt-20 py-24 px-6">
   <div class="max-w-2xl mx-auto text-center">
     <h2 class="text-[32px] md:text-[44px] font-extrabold leading-tight text-primary">Preguntas frecuentes</h2>
     <p class="mt-4 text-base md:text-lg">¿Te quedó alguna duda? Probablemente esté respondida aquí.</p>
@@ -541,24 +1037,24 @@
   <div class="max-w-2xl mx-auto mt-12 space-y-4">
     <details class="faq-item bg-white rounded-2xl px-6 md:px-7 py-5 md:py-6">
       <summary class="faq-summary flex justify-between items-center gap-6 font-heading font-bold text-primary text-base md:text-lg">
-        <span>¿Necesito saber programar?</span>
+        <span>¿Que tipo de soporte puedo obtener?</span>
         <span class="faq-icon"><span class="faq-bar faq-bar-h"></span><span class="faq-bar faq-bar-v"></span></span>
       </summary>
-      <p class="text-sm text-ink mt-4 pr-10">No. El método fue hecho para principiantes. No escribes ni una sola línea de código: la Inteligencia Artificial hace el trabajo pesado y tú sigues el paso a paso.</p>
+      <p class="text-sm text-ink mt-4 pr-10">Brindamos un soporte enfocado a la actualizacion, seguridad, respaldo y Edición de la web  .</p>
     </details>
     <details class="faq-item bg-white rounded-2xl px-6 md:px-7 py-5 md:py-6">
       <summary class="faq-summary flex justify-between items-center gap-6 font-heading font-bold text-primary text-base md:text-lg">
         <span>¿Necesito contratar una agencia?</span>
         <span class="faq-icon"><span class="faq-bar faq-bar-h"></span><span class="faq-bar faq-bar-v"></span></span>
       </summary>
-      <p class="text-sm text-ink mt-4 pr-10">No. La propuesta es justamente enseñarte a crear y publicar tu propio sitio, sin depender de terceros para cada cambio.</p>
+      <p class="text-sm text-ink mt-4 pr-10">No. La propuesta es justamente enseñarte a editar y publicar tu propio sitio, sin depender de terceros para cada cambio.</p>
     </details>
     <details class="faq-item bg-white rounded-2xl px-6 md:px-7 py-5 md:py-6">
       <summary class="faq-summary flex justify-between items-center gap-6 font-heading font-bold text-primary text-base md:text-lg">
         <span>¿El sitio queda en mi dominio?</span>
         <span class="faq-icon"><span class="faq-bar faq-bar-h"></span><span class="faq-bar faq-bar-v"></span></span>
       </summary>
-      <p class="text-sm text-ink mt-4 pr-10">Sí. Aprendes a registrar y usar un dominio propio, con el nombre de tu negocio, transmitiendo más profesionalismo.</p>
+      <p class="text-sm text-ink mt-4 pr-10">Sí. Tanto el dominio como el Hosting son de suscripción anual y podrás reservar los derechos durante el tiempo que desee, transmitiendo más profesionalismo.</p>
     </details>
     <details class="faq-item bg-white rounded-2xl px-6 md:px-7 py-5 md:py-6">
       <summary class="faq-summary flex justify-between items-center gap-6 font-heading font-bold text-primary text-base md:text-lg">
@@ -572,14 +1068,14 @@
         <span>¿En cuánto tiempo logro publicar?</span>
         <span class="faq-icon"><span class="faq-bar faq-bar-h"></span><span class="faq-bar faq-bar-v"></span></span>
       </summary>
-      <p class="text-sm text-ink mt-4 pr-10">La propuesta es que logres publicar en hasta 1 día siguiendo el paso a paso, incluso empezando desde cero.</p>
+      <p class="text-sm text-ink mt-4 pr-10">La propuesta es que logres publicar en hasta 2 día. Eliminando el proceso tedioso de tener que esperar hasta dos semanas para ver tu pagina publicada.</p>
     </details>
     <details class="faq-item bg-white rounded-2xl px-6 md:px-7 py-5 md:py-6">
       <summary class="faq-summary flex justify-between items-center gap-6 font-heading font-bold text-primary text-base md:text-lg">
         <span>¿El acceso es inmediato?</span>
         <span class="faq-icon"><span class="faq-bar faq-bar-h"></span><span class="faq-bar faq-bar-v"></span></span>
       </summary>
-      <p class="text-sm text-ink mt-4 pr-10">Sí. Tras la confirmación de la compra, el acceso al contenido se libera al instante, 100% en línea.</p>
+      <p class="text-sm text-ink mt-4 pr-10">Sí. Tras la confirmación de la compra, el acceso al contenido se libera en un plazo máximo de 72 horas, 100% en línea.</p>
     </details>
   </div>
 </section>
@@ -591,9 +1087,126 @@
   </span>
   <h2 class="text-2xl md:text-[38px] font-bold leading-tight max-w-2xl mx-auto mt-6">Tu negocio merece un sitio profesional</h2>
   <p class="mt-5 text-base md:text-lg max-w-xl mx-auto">Deja de posponer tu presencia digital. Aprende a crear tu sitio, publicarlo en internet y transmitir más credibilidad a tus clientes.</p>
-  <a href="https://metodomeunegocioonline.com/es/#oferta" class="btn-primary inline-flex items-center gap-2 px-8 py-4 font-semibold text-base mt-8">Crear mi sitio por USD 12,90 →</a>
-  <p class="text-xs text-ink/50 mt-4">De USD 197 por USD 12,90 · Garantía de 7 días · Acceso inmediato</p>
+  <a href="https://www.paypal.com/ncp/payment/F95YDPTQ8JC84" class="btn-primary inline-flex items-center gap-2 px-8 py-4 font-semibold text-base mt-8">Crear mi sitio por USD 209.00 →</a>
+  <p class="text-xs text-ink/50 mt-4">De USD 400 por USD 209.00 · Garantía de 7 días · Acceso inmediato</p>
 </section>
+
+<footer class="site-footer px-6 py-6">
+  <div class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-4 text-center text-sm text-ink/75 sm:flex-row sm:text-left">
+    <p>Agencia web Digloff ❤️ por <a class="font-semibold text-primary" href="https://digloff.com/">Luis Guzman</a></p>
+    <nav aria-label="Enlaces legales" class="flex flex-wrap items-center justify-center gap-x-3 gap-y-2">
+      <a class="hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" href="politica-de-privacidad.html" target="_blank" rel="noopener noreferrer">Política de privacidad</a>
+      <span aria-hidden="true" class="text-ink/35">|</span>
+      <a class="hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary" href="terminos-y-condiciones.html">Términos y condiciones</a>
+    </nav>
+  </div>
+</footer>
+
+<div class="whatsapp-widget" id="whatsappWidget">
+  <section class="whatsapp-panel" id="whatsappPanel" role="dialog" aria-labelledby="whatsappTitle" hidden>
+    <div class="whatsapp-header">
+      <span class="whatsapp-avatar" aria-hidden="true">D</span>
+      <div>
+        <h2 class="m-0 text-base font-bold text-white" id="whatsappTitle">Digloff</h2>
+        <p class="mt-1 text-sm text-white/85">Asesoría digital</p>
+      </div>
+      <button class="whatsapp-close" id="whatsappClose" type="button" aria-label="Cerrar ventana de WhatsApp">×</button>
+    </div>
+    <div class="whatsapp-message-area">
+      <div class="whatsapp-message">
+        <strong>¡Hola!</strong>
+        👋🏼 Hablemos de su proyecto.<br>
+        🚀 Estoy aquí para ayudarte.<br>
+        😊 ¡Contáctame!
+      </div>
+    </div>
+    <div class="whatsapp-start-area">
+      <a class="whatsapp-start" href="https://wa.me/18093025082?text=Hola%2C%20quiero%20hablar%20sobre%20mi%20proyecto" target="_blank" rel="noopener noreferrer">
+        <img class="whatsapp-icon" src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="" aria-hidden="true">
+        Inicia el chat
+      </a>
+    </div>
+  </section>
+  <button class="whatsapp-trigger" id="whatsappTrigger" type="button" aria-label="Abrir contacto de WhatsApp" aria-expanded="false" aria-controls="whatsappPanel">
+    <img class="whatsapp-icon" src="https://cdn.simpleicons.org/whatsapp/ffffff" alt="" aria-hidden="true">
+  </button>
+</div>
+
+<script>
+  (function(){
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenu.querySelectorAll('nav a').forEach((link)=>{
+      link.addEventListener('click', ()=> mobileMenu.removeAttribute('open'));
+    });
+
+    const whatsappWidget = document.getElementById('whatsappWidget');
+    const whatsappPanel = document.getElementById('whatsappPanel');
+    const whatsappTrigger = document.getElementById('whatsappTrigger');
+    const whatsappClose = document.getElementById('whatsappClose');
+    function setWhatsappOpen(open, returnFocus=true){
+      whatsappPanel.hidden = !open;
+      whatsappTrigger.setAttribute('aria-expanded', String(open));
+      if (open) whatsappClose.focus();
+      else if (returnFocus) whatsappTrigger.focus();
+    }
+    whatsappTrigger.addEventListener('click', ()=>{
+      setWhatsappOpen(whatsappPanel.hidden);
+    });
+    whatsappClose.addEventListener('click', ()=> setWhatsappOpen(false));
+    document.addEventListener('keydown', (event)=>{
+      if (event.key === 'Escape' && !whatsappPanel.hidden) setWhatsappOpen(false);
+    });
+    document.addEventListener('click', (event)=>{
+      if (!whatsappPanel.hidden && !whatsappWidget.contains(event.target)) setWhatsappOpen(false, false);
+    });
+
+    const automationCards = document.querySelectorAll('.automation-card');
+    automationCards.forEach((card, index)=>{
+      card.style.setProperty('--i', String(index));
+
+      const toggle = card.querySelector('.automation-summary');
+      toggle.addEventListener('click', ()=>{
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', String(!expanded));
+        card.classList.toggle('is-expanded', !expanded);
+      });
+
+      card.addEventListener('pointermove', (event)=>{
+        const bounds = card.getBoundingClientRect();
+        const x = ((event.clientX - bounds.left) / bounds.width) * 100;
+        const y = ((event.clientY - bounds.top) / bounds.height) * 100;
+        card.style.setProperty('--mx', `${x}%`);
+        card.style.setProperty('--my', `${y}%`);
+      });
+    });
+
+    const automationGrid = document.querySelector('.automation-grid');
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (automationGrid && !reduceMotion && 'IntersectionObserver' in window) {
+      automationGrid.classList.add('is-animating');
+      let animationsRemaining = automationCards.length;
+      automationCards.forEach((card)=>{
+        const handleAnimationEnd = (event)=>{
+          if (event.target !== card || event.animationName !== 'automation-fade-up') return;
+          card.removeEventListener('animationend', handleAnimationEnd);
+          animationsRemaining -= 1;
+          if (animationsRemaining === 0) {
+            automationGrid.classList.remove('is-animating', 'is-visible');
+          }
+        };
+        card.addEventListener('animationend', handleAnimationEnd);
+      });
+
+      const observer = new IntersectionObserver((entries)=>{
+        if (entries.some((entry)=> entry.isIntersecting)) {
+          automationGrid.classList.add('is-visible');
+          observer.disconnect();
+        }
+      }, { threshold: 0.16 });
+      observer.observe(automationGrid);
+    }
+  })();
+</script>
 
 </body>
 </html>

@@ -85,6 +85,108 @@
     font-family: 'Sora', sans-serif;
   }
   .btn-primary:hover { filter: brightness(1.05); transform: translateY(-1px); }
+  .hero-timing {
+    position: relative;
+  }
+  .hero-timing::after {
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, rgba(193,255,224,0.95), transparent);
+    content: "";
+    pointer-events: none;
+    transform: translateX(-110%);
+    animation: hero-underline-sweep 3.4s ease-in-out infinite;
+  }
+  @keyframes hero-underline-sweep {
+    0%, 15% { opacity: 0; transform: translateX(-110%); }
+    35% { opacity: 1; }
+    75%, 100% { opacity: 0; transform: translateX(110%); }
+  }
+  .hero-cta-wrap {
+    position: relative;
+    display: inline-flex;
+    isolation: isolate;
+    border-radius: 9999px;
+    animation: hero-cta-float 3.2s ease-in-out infinite;
+  }
+  .hero-cta-wrap::before {
+    position: absolute;
+    z-index: 0;
+    inset: 0;
+    border: 1px solid rgba(22,192,121,0.72);
+    border-radius: inherit;
+    content: "";
+    pointer-events: none;
+    animation: hero-cta-halo 3.2s ease-out infinite;
+  }
+  @keyframes hero-cta-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-4px); }
+  }
+  @keyframes hero-cta-halo {
+    0% { opacity: 0.55; transform: scale(1); }
+    75%, 100% { opacity: 0; transform: scale(1.48); }
+  }
+  .hero-cta {
+    position: relative;
+    z-index: 1;
+    isolation: isolate;
+    overflow: hidden;
+    transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow .3s ease, filter .3s ease;
+  }
+  .hero-cta::after {
+    position: absolute;
+    z-index: 0;
+    top: -30%;
+    bottom: -30%;
+    left: 0;
+    width: 42%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.24), transparent);
+    content: "";
+    pointer-events: none;
+    transform: translateX(-160%) skewX(-20deg);
+    animation: hero-cta-sheen 5s ease-in-out infinite;
+  }
+  .hero-cta > span {
+    position: relative;
+    z-index: 1;
+  }
+  @keyframes hero-cta-sheen {
+    0%, 28% { opacity: 0; transform: translateX(-160%) skewX(-20deg); }
+    40% { opacity: 1; }
+    62%, 100% { opacity: 0; transform: translateX(360%) skewX(-20deg); }
+  }
+  .hero-cta:hover,
+  .hero-cta:focus-visible {
+    box-shadow: 0 14px 34px -8px rgba(22,192,121,0.62);
+    filter: brightness(1.04);
+    transform: translateY(-2px);
+  }
+  .hero-cta:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 4px;
+  }
+  .hero-cta:active {
+    transform: translateY(0) scale(0.98);
+  }
+  .hero-cta-arrow {
+    transition: transform .3s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .hero-cta:hover .hero-cta-arrow,
+  .hero-cta:focus-visible .hero-cta-arrow {
+    transform: translateX(3px);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-timing::after,
+    .hero-cta-wrap,
+    .hero-cta-wrap::before,
+    .hero-cta::after { animation: none; }
+    .hero-cta,
+    .hero-cta-arrow { transition: none; }
+  }
   .booking-submit {
     min-height: 48px;
     border: 1px solid rgba(75,120,209,0.55);
@@ -544,7 +646,7 @@
         Tu negocio merece una web profesional.
       </h1>
       <p class="mt-5 max-w-lg font-heading text-[21px] font-semibold leading-[1.3] text-white/75 md:text-[25px]">
-        La creamos en <span class="inline-block whitespace-nowrap border-b-2 border-accent pb-1 text-accent">solo 3 días</span>
+        La creamos en <span class="hero-timing inline-block whitespace-nowrap border-b-2 border-accent pb-1 text-accent">solo 3 días</span>
         para que ahorres cientos de dólares.
       </p>
       <p class="text-white/60 text-base md:text-lg max-w-md mt-6">
@@ -552,9 +654,11 @@
       </p>
 
       <div class="mt-8">
-        <a href="https://www.paypal.com/ncp/payment/F95YDPTQ8JC84" class="btn-primary inline-flex items-center gap-2 px-8 py-4 font-semibold text-base">
-          Quiero crear mi sitio ahora →
-        </a>
+        <span class="hero-cta-wrap">
+          <a href="https://www.paypal.com/ncp/payment/F95YDPTQ8JC84" class="btn-primary hero-cta inline-flex items-center gap-2 px-8 py-4 font-semibold text-base">
+            <span>Quiero crear mi sitio ahora</span><span class="hero-cta-arrow" aria-hidden="true">→</span>
+          </a>
+        </span>
         <div class="flex flex-wrap gap-x-5 gap-y-1.5 text-white/50 eyebrow text-xs mt-4">
           <span class="flex items-center gap-1.5"><span class="text-accent">✓</span> Acceso inmediato</span>
           <span class="flex items-center gap-1.5"><span class="text-accent">✓</span> Paso a paso desde cero</span>
